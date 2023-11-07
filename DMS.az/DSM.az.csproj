@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Folder Include="ViewModels\" />
-    <Folder Include="wwwroot\Users\" />
+    <Folder Include="wwwroot\Users\images\" />
   </ItemGroup>
 
   <ItemGroup>
