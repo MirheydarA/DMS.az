@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\DSM.az.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\DSM.az.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\DSM.az.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\DSM.az.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\DSM.az.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\DSM.az.csproj",
         "projectName": "DSM.az",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\DSM.az.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\DSM.az.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

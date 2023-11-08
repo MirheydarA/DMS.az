@@ -1,4 +1,5 @@
-﻿using DSM.az.Models;
+﻿using DMS.az.Models;
+using DSM.az.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ namespace DMS.az.DAL
 
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<Service> Services { get; set; }
 
     }
 }

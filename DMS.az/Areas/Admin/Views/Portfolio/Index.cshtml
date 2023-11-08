@@ -14,8 +14,8 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Photo</th>
-                    <th>Redirect Link</th>
+                    <th>Şəkil</th>
+                    <th>Başlıq</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
@@ -29,9 +29,7 @@
                         <tr>
 
                             <td class=""><img src="~/Users/images/@item.Photo" alt="image" /></td>
-                            <td>
-                                <a href="https://@item.RedirectLink" class="btn btn-link">ClickToRedirect</a>
-                            </td>
+                            <td>@item.Title</td>
                             <td>
                                 @if (!item.IsDeleted)
                                 {

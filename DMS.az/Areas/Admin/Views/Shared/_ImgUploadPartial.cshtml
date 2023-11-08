@@ -14,7 +14,9 @@
                 image.setAttribute("width", '100');
 
                 var videoDiv = document.getElementById("videoPreview");
-                videoDiv.innerHTML = "";
+                if (videoDiv) {
+                    videoDiv.innerHTML = "";
+                }
 
                 div.innerHTML = "";
                 div.appendChild(image);

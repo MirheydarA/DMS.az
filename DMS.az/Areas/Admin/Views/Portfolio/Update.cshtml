@@ -4,7 +4,7 @@
 <div class="main-panel">
     <div class="">
         <div class="card-body">
-            <h4 class="card-title">Slider Update</h4>
+            <h4 class="card-title">Portfolio Update</h4>
 
 
             <form class="forms-sample" enctype="multipart/form-data" asp-action="update" asp-controller="Portfolio" method="post">
@@ -19,9 +19,21 @@
                 </div>
                 
                 <div class="form-group">
-                    <label asp-for="RedirectLink"></label>
-                    <input asp-for="RedirectLink" type="text" class="form-control" id="exampleInputName1" placeholder="Title" />
-                    <span asp-validation-for="RedirectLink"></span>
+                    <label asp-for="Title"></label>
+                    <input asp-for="Title" type="text" class="form-control" id="exampleInputName1" placeholder="Title" />
+                    <span asp-validation-for="Title"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <input asp-for="Description" type="text" class="form-control" id="exampleInputName1" placeholder="Title" />
+                    <span asp-validation-for="Description"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ShortDesc"></label>
+                    <input asp-for="ShortDesc" type="text" class="form-control" id="exampleInputName1" placeholder="Title" />
+                    <span asp-validation-for="ShortDesc"></span>
                 </div>
 
                 <button type="submit" class="btn btn-primary mr-2"> Update </button>

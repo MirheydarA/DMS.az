@@ -60,7 +60,9 @@ namespace DSM.az.Areas.Admin.Controllers
 
             var portfolio = new Portfolio
             {
-                RedirectLink = model.RedirectLink,
+                Title = model.Title,
+                Description = model.Description,
+                ShortDesc = model.ShortDesc,
                 Photo = _fileService.Upload(model.Photo),
                 CreatedAt = DateTime.Now
             };
@@ -81,7 +83,9 @@ namespace DSM.az.Areas.Admin.Controllers
 
             var model = new PortfolioUpdateVM
             {
-                RedirectLink = portfolio.RedirectLink,
+                Title = portfolio.Title,
+                Description = portfolio.Description,
+                ShortDesc = portfolio.ShortDesc,
                 PhotoPath = portfolio.Photo
             };
 
@@ -114,7 +118,9 @@ namespace DSM.az.Areas.Admin.Controllers
                 portfolio.Photo = _fileService.Upload(model.Photo);
             }
 
-            portfolio.RedirectLink = model.RedirectLink;
+            portfolio.Title = model.Title;
+            portfolio.Description = model.Description;
+            portfolio.ShortDesc = model.ShortDesc;
             portfolio.ModifiedAt = DateTime.Now;
 
             _context.Portfolios.Update(portfolio);
