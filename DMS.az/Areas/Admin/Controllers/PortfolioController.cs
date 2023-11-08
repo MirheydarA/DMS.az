@@ -96,7 +96,7 @@ namespace DSM.az.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id, PortfolioUpdateVM model)
         {
             var portfolio = _context.Portfolios.FirstOrDefault(s => s.Id == id);
-            if (portfolio is null) return NotFound("Portfolio Tapılmadı");
+            if (portfolio is null) return NotFound("Portfolio Tapılmadı!");
 
 
             if (!ModelState.IsValid) return View();

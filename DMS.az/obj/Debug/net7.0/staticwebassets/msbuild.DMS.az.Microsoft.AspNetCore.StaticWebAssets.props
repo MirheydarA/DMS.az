@@ -11824,6 +11824,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Users\images\24d4ae23-d1a6-42e4-8ab7-21ebbb1e1f22_9.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Users\images\2c97edf2-4663-4c48-88cf-1271c0e79fbc_9.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DMS.az</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DMS.az</BasePath>
+      <RelativePath>Users/images/2c97edf2-4663-4c48-88cf-1271c0e79fbc_9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Users\images\2c97edf2-4663-4c48-88cf-1271c0e79fbc_9.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Users\images\2ed503f6-48b0-4d8d-ab44-0d543e1997b2_DataStructuresCerficate.png))">
       <SourceType>Package</SourceType>
       <SourceId>DMS.az</SourceId>
@@ -11855,6 +11871,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Users\images\3335b3e7-6b4b-4e2e-ac13-4cbf6b3e075f_DataStructuresCerficate.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Users\images\632fc2da-00b9-4368-a760-b39f41a14ca9_9.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>DMS.az</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/DMS.az</BasePath>
+      <RelativePath>Users/images/632fc2da-00b9-4368-a760-b39f41a14ca9_9.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Users\images\632fc2da-00b9-4368-a760-b39f41a14ca9_9.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Users\images\6c116077-183d-48f2-b7af-318f8643fe59_istockphoto-1287615602-612x612ş1.jpg))">
       <SourceType>Package</SourceType>
