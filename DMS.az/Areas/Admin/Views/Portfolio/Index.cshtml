@@ -1,5 +1,5 @@
-﻿@using DSM.az.Areas.Admin.ViewModels.Slider
-@model SliderIndexVM
+﻿@using DSM.az.Areas.Admin.ViewModels.Portfolio
+@model PortfolioIndexVM
 
 <div class="card-body">
     <h4 class="card-title">Basic Table</h4>
@@ -7,7 +7,7 @@
         Add class <code>.table</code>
     </p>
 
-    <a class="btn btn-info mb-3" asp-action="Create" asp-controller="slider">Create</a>
+    <a class="btn btn-info mb-3" asp-action="Create" asp-controller="Portfolio">Create</a>
 
 
     <div class="table-responsive">
@@ -15,33 +15,23 @@
             <thead>
                 <tr>
                     <th>Photo</th>
-                    <th>Title</th>
+                    <th>Redirect Link</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
 
             <tbody>
-                @if (Model.Sliders is not null)
+                @if (Model.Portfolios is not null)
                 {
-                    @foreach (var item in Model.Sliders)
+                    @foreach (var item in Model.Portfolios)
                     {
                         <tr>
-                            @if (item.Type.ToString() == "Video")
-                            {
-                                <td>
-                                    <video width="160" height="80" controls>
-                                        <source src="~/Users/images/@item.MediaPath" type="video/mp4">
-                                        @*<source src="movie.ogg" type="video/ogg">*@
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </td>
-                            }
-                            else
-                            {
-                                <td class=""><img src="~/Users/images/@item.MediaPath" alt="image"/></td>
-                            }
-                            <td>@item.Title</td>
+
+                            <td class=""><img src="~/Users/images/@item.Photo" alt="image" /></td>
+                            <td>
+                                <a href="https://@item.RedirectLink" class="btn btn-link">ClickToRedirect</a>
+                            </td>
                             <td>
                                 @if (!item.IsDeleted)
                                 {
@@ -53,8 +43,8 @@
                                 }
                             </td>
                             <td>
-                                <a asp-action="Update" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-primary"><i class="mdi mdi-pencil"></i></a>
-                                <a asp-action="Delete" asp-controller="slider" asp-route-id="@item.Id" class="btn btn-danger btn-delete"> <i class="mdi mdi-delete"></i> </a>
+                                <a asp-action="Update" asp-controller="Portfolio" asp-route-id="@item.Id" class="btn btn-primary"><i class="mdi mdi-pencil"></i></a>
+                                <a asp-action="Delete" asp-controller="Portfolio" asp-route-id="@item.Id" class="btn btn-danger btn-delete"> <i class="mdi mdi-delete"></i> </a>
                             </td>
                         </tr>
                     }
@@ -106,6 +96,4 @@
             })
         })
     </script>
-
-
 }

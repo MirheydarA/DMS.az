@@ -2949,8 +2949,28 @@
       "PackagePath": "staticwebassets\\Admin\\vendors\\typeahead.js\\typeahead.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\wwwroot\\Users\\images\\8cb5c79d-0d93-4fb6-885d-b85041737725_movie.mp4",
-      "PackagePath": "staticwebassets\\Users\\images\\8cb5c79d-0d93-4fb6-885d-b85041737725_movie.mp4"
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\wwwroot\\Users\\images\\0517261e-ab8f-4681-a51b-c50cdc26ee82_9.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\0517261e-ab8f-4681-a51b-c50cdc26ee82_9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\wwwroot\\Users\\images\\24d4ae23-d1a6-42e4-8ab7-21ebbb1e1f22_9.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\24d4ae23-d1a6-42e4-8ab7-21ebbb1e1f22_9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\wwwroot\\Users\\images\\2ed503f6-48b0-4d8d-ab44-0d543e1997b2_DataStructuresCerficate.png",
+      "PackagePath": "staticwebassets\\Users\\images\\2ed503f6-48b0-4d8d-ab44-0d543e1997b2_DataStructuresCerficate.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\wwwroot\\Users\\images\\6c116077-183d-48f2-b7af-318f8643fe59_istockphoto-1287615602-612x612ş1.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\6c116077-183d-48f2-b7af-318f8643fe59_istockphoto-1287615602-612x612ş1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\wwwroot\\Users\\images\\863d6240-1c85-4249-8f00-315da8724345_9.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\863d6240-1c85-4249-8f00-315da8724345_9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DSM.az\\DMS.az\\wwwroot\\Users\\images\\c7b58172-3299-4958-b1f4-13d87105ee88_DataStructuresCerficate.png",
+      "PackagePath": "staticwebassets\\Users\\images\\c7b58172-3299-4958-b1f4-13d87105ee88_DataStructuresCerficate.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DSM.az.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -12,7 +12,8 @@ namespace DMS.az.DAL
 
         }
 
-            public DbSet<Slider> Sliders { get; set;}
-        
+        public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Portfolio> Portfolios { get; set; }
+
     }
 }

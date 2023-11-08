@@ -1,0 +1,37 @@
+﻿@using DSM.az.Areas.Admin.ViewModels.Portfolio
+@model PortfolioUpdateVM
+
+<div class="main-panel">
+    <div class="">
+        <div class="card-body">
+            <h4 class="card-title">Slider Update</h4>
+
+
+            <form class="forms-sample" enctype="multipart/form-data" asp-action="update" asp-controller="Portfolio" method="post">
+                <div asp-validation-summary="ModelOnly"></div>
+                
+                <div class="form-group">
+                    <label asp-for="Photo"></label>
+                    <input asp-for="Photo" class="form-control imgInput" id="exampleInputName1" placeholder="Title" />
+                    <span asp-validation-for="Photo"></span>
+
+                    <div id="imgPreview" class="mt-1"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="RedirectLink"></label>
+                    <input asp-for="RedirectLink" type="text" class="form-control" id="exampleInputName1" placeholder="Title" />
+                    <span asp-validation-for="RedirectLink"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2"> Update </button>
+                <button asp-action="index" asp-controller="Portfolio" class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    @await Html.PartialAsync("_ImgUploadPartial")
+}
