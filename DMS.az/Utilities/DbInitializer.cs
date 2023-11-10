@@ -1,16 +1,61 @@
-﻿using DSM.az.Enums;
+﻿using DMS.az.DAL;
+using DMS.az.Models;
+using DSM.az.Enums;
 using DSM.az.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace DSM.az.Utilities
 {
     public class DbInitializer
     {
-        public async static Task SeedAsync(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+        public async static Task SeedAsync(RoleManager<IdentityRole> roleManager, UserManager<User> userManager, AppDbContext context)
         {
             await SeedRolesAsync(roleManager);
             await SeedUsersAsync(userManager);
+            await SeedContactAsync(context);
+            await SeedAboutUsAsync(context);
         }
+
+        private static async Task SeedAboutUsAsync(AppDbContext context)
+        {
+            var aboutUs = await context.AboutUs.Where(x => !x.IsDeleted).ToListAsync();
+            if (aboutUs.Count == 0)
+            {
+                var newAboutUs = new AboutUs()
+                {
+                    Photo1 = "asdasd",
+                    Photo2 = "sdasdas",
+                    Description = "asdasdadsdasdasdasdadssdasdasdadsdasdasdasdadssdasdasdadsdasdasdasdadssdasdasdadsdasdasdasdadssdasdasdadsdasdasdasdadssd",
+                    CreatedAt = DateTime.Now,
+                };
+
+                context.AboutUs.Add(newAboutUs);
+                await context.SaveChangesAsync();
+            }
+        }
+
+        private static async Task SeedContactAsync(AppDbContext context)
+        {
+            var contact = await context.Contact.Where(x => !x.IsDeleted).ToListAsync();
+
+            if (contact.Count == 0)
+            {
+                var newContact = new Contact()
+                {
+                    Address = "Lenkeran",
+                    Email = "a.mirheyder004@gmail.com",
+                    PhoneNumber = "1234567890", 
+                    CreatedAt = DateTime.Now,
+                };
+
+                context.Contact.Add(newContact);
+                await context.SaveChangesAsync();
+            }
+
+
+        }
+
 
         private async static Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
         {

@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\Admin\\fonts\\rubik\\Rubik-Regular.woff2"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Admin\\images\\Artboard 17.svg",
+      "PackagePath": "staticwebassets\\Admin\\images\\Artboard 17.svg"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Admin\\images\\auth\\lockscreen-bg.jpg",
       "PackagePath": "staticwebassets\\Admin\\images\\auth\\lockscreen-bg.jpg"
     },
@@ -195,6 +199,10 @@
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Admin\\images\\dashboard\\img_5.jpg",
       "PackagePath": "staticwebassets\\Admin\\images\\dashboard\\img_5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Admin\\images\\dmslogo.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\dmslogo.png"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Admin\\images\\faces-clipart\\pic-1.png",
@@ -2953,6 +2961,18 @@
       "PackagePath": "staticwebassets\\Users\\images\\0517261e-ab8f-4681-a51b-c50cdc26ee82_9.jpg"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\0b8ed749-b99e-497b-8298-727fc34a2019_Untitled6.png",
+      "PackagePath": "staticwebassets\\Users\\images\\0b8ed749-b99e-497b-8298-727fc34a2019_Untitled6.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\21e32751-f396-4d38-aaf5-bb5212ee64ff_istockphoto-610855984-612x612.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\21e32751-f396-4d38-aaf5-bb5212ee64ff_istockphoto-610855984-612x612.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\230e7b19-7d49-445e-8149-048fdd42cf79_istockphoto-1287615602-612x612ş1.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\230e7b19-7d49-445e-8149-048fdd42cf79_istockphoto-1287615602-612x612ş1.jpg"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\24d4ae23-d1a6-42e4-8ab7-21ebbb1e1f22_9.jpg",
       "PackagePath": "staticwebassets\\Users\\images\\24d4ae23-d1a6-42e4-8ab7-21ebbb1e1f22_9.jpg"
     },
@@ -2961,12 +2981,20 @@
       "PackagePath": "staticwebassets\\Users\\images\\2c97edf2-4663-4c48-88cf-1271c0e79fbc_9.jpg"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\2e784d62-f831-4029-ba48-90e94cee8fe3_9.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\2e784d62-f831-4029-ba48-90e94cee8fe3_9.jpg"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\2ed503f6-48b0-4d8d-ab44-0d543e1997b2_DataStructuresCerficate.png",
       "PackagePath": "staticwebassets\\Users\\images\\2ed503f6-48b0-4d8d-ab44-0d543e1997b2_DataStructuresCerficate.png"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\3335b3e7-6b4b-4e2e-ac13-4cbf6b3e075f_DataStructuresCerficate.png",
       "PackagePath": "staticwebassets\\Users\\images\\3335b3e7-6b4b-4e2e-ac13-4cbf6b3e075f_DataStructuresCerficate.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\5fc4c83f-3865-4136-8008-f4aba31b57e6_22.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\5fc4c83f-3865-4136-8008-f4aba31b57e6_22.jpg"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\632fc2da-00b9-4368-a760-b39f41a14ca9_9.jpg",

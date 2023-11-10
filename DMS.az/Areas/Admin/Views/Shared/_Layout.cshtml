@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using DSM.az.Areas.Admin.ViewModels.Account
+@using DSM.az.Models;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -16,18 +23,15 @@
 <body>
     <div class="container-scroller">
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
-            <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
-                <a class="sidebar-brand brand-logo" asp-action="index" asp-controller="dashboard"><img src="~/Admin/images/logo.svg" alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="index.html"><img src="~/Admin/images/logo-mini.svg" alt="logo" /></a>
+            @*<div class="text-center sidebar-brand-wrapper d-flex align-items-center">
+                <a class="sidebar-brand brand-logo" asp-action="index" asp-controller="dashboard"><img src="~/Admin/images/Artboard 17.svg" alt="logo" /></a>
+            </div>*@
+
+            <div class="nav-item nav-profile" style="width: 130px; height: 130px">
+                <a class="sidebar-brand brand-logo" asp-action="index" asp-controller="dashboard"><img src="~/Admin/images/Artboard 17.svg" alt="logo" /></a>
             </div>
+
             <ul class="nav">
-                <li class="nav-item nav-profile">
-                    <a href="#" class="nav-link">
-                        <div class="nav-profile-text d-flex flex-column pr-3">
-                            <span class="font-weight-medium mb-2">Henry Klein</span>
-                        </div>
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" asp-action="index" asp-controller="dashboard">
                         <i class="mdi mdi-home menu-icon"></i>
@@ -39,6 +43,13 @@
                     <a class="nav-link" asp-action="index" asp-controller="slider">
                         <i class="mdi mdi-code-greater-than mr-3"></i>
                         <span class="menu-title">Slider</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="index" asp-controller="AboutUs">
+                        <i class="mdi mdi-code-greater-than mr-3"></i>
+                        <span class="menu-title">Haqqımızda</span>
                     </a>
                 </li>
 
@@ -55,11 +66,29 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="index" asp-controller="ouremployees">
+                        <i class="mdi mdi-code-greater-than mr-3"></i>
+                        <span class="menu-title">Əməkdaşlarımız</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="index" asp-controller="Contact">
+                        <i class="mdi mdi-code-greater-than mr-3"></i>
+                        <span class="menu-title">Əlaqə</span>
+                    </a>
+                </li>
+
                 <li class="nav-item sidebar-actions">
                     <div class="nav-link">
                         <div class="mt-4">
                             <ul class="mt-4 pl-0">
-                                <li>Sign Out</li>
+                                <li>
+                                    <a class="nav-link" asp-action="logout" asp-controller="account">
+                                        Sign Out
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -112,10 +141,10 @@
                         <li class="nav-item nav-profile dropdown border-0">
                             <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown">
                                 <i class="mdi mdi-account"></i>
-                                <span class="profile-name">Henry Klein</span>
+                                <span class="profile-name">@User.Identity.Name</span>
                             </a>
                             <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" asp-action="logout" asp-controller="account">
                                     <i class="mdi mdi-logout mr-2 text-primary"></i> Signout
                                 </a>
                             </div>
@@ -156,7 +185,6 @@
     <!-- Custom js for this page -->
     <script src="~/Admin/js/dashboard.js"></script>
     <!-- End custom js for this page -->
-
     @RenderSection("scripts", false)
 </body>
 </html>
