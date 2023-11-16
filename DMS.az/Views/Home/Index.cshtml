@@ -1,5 +1,168 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@using DMS.az.ViewModels.Home
+@model HomeIndexVM
+
+<!-- START MAIN -->
+<main>
+    <section id="about_h">
+        <div class="container">
+            <div class="title"><h2>HAQQIMIZDA</h2></div>
+
+            <div class="images">
+                <div class="images-teamwork"><img src="~/Users/assets/images/index/teamwork.png" alt=""></div>
+                <div class="images-office">
+                    <img src="~/Users/assets/images/index/office1.png" alt="">
+                    <img src="~/Users/assets/images/index/office1.png" alt="">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="about_us">
+                    <h5>Who we are</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore.
+                    </p>
+                </div>
+                <div class="about_us">
+                    <h5>Our Philosophy</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore.
+                    </p>
+                </div>
+                <div class="about_us">
+                    <h5>How we work</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio_h">
+        <div class="container">
+            <div class="title"><h2>PORTFOLİO</h2></div>
+
+            <div class="slider">
+                @foreach (var item in Model.Portfolios)
+                {
+
+                    <img src="~/Users/images/@item.Photo" alt="">
+                }
+                <img src="~/Users/assets/images/index/portfolio/sea.png" alt="">
+                <img src="~/Users/assets/images/index/portfolio/sea2.png" alt="">
+                <img src="~/Users/assets/images/index/portfolio/social-media-management-ottawa.png" alt="">
+                <img src="~/Users/assets/images/index/portfolio/sea.png" alt="">
+                <img src="~/Users/assets/images/index/portfolio/sea2.png" alt="">
+                <img src="~/Users/assets/images/index/portfolio/social-media-management-ottawa.png" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section id="services_h">
+        <div class="container">
+            <div class="title"><h2>XİDMƏTLƏR</h2></div>
+
+            <div id="services-container" class="services_info">
+                @foreach (var item in Model.Services)
+                {
+                    <div class="info">
+                        <img src="~/Users/images/@item.Icon" alt="">
+                        <h3>@item.Name</h3>
+                        <p>
+                            @item.ShortDesc
+                        </p>
+                    </div>
+                }
+            </div>
+
+            @if ()
+            {
+                
+            }
+            <div class="more"><a id="loadMore" style="display: flex; align-items: center; justify-content:center" class="more_bttn">Daha çox</a></div>
+
+        </div>
+    </section>
+
+    <section id="colleagues_h">
+        <div class="container">
+            <div class="title"><h2>ƏMƏKDAŞLARIMIZ</h2></div>
+
+            <div class="slider">
+                <img src="~/Users/assets/images/index/colleagues/teamwork.png" alt="">
+                <img src="~/Users/assets/images/index/colleagues/logo.png" alt="">
+                <img src="~/Users/assets/images/index/colleagues/logo2.png" alt="">
+                <img src="~/Users/assets/images/index/colleagues/teamwork.png" alt="">
+                <img src="~/Users/assets/images/index/colleagues/logo.png" alt="">
+                <img src="~/Users/assets/images/index/colleagues/logo2.png" alt="">
+                <img src="~/Users/assets/images/index/colleagues/teamwork.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact_h">
+        <div class="container">
+            <div class="title"><h2>BİZİMLƏ ƏLAQƏ</h2></div>
+
+            <div class="contact_info">
+                <div class="info">
+                    <ul>
+                        <li>
+                            <div class="icon"><img src="~/Users/assets/images/index/contact/location.png" alt=""></div>
+                            <div class="text">
+                                <h4>Address</h4>
+                                <p>4671 Sugar Walley, road. Baku, Az 1126</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="icon"><img src="~/Users/assets/images/index/contact/phone.png" alt=""></div>
+                            <div class="text">
+                                <h4>Phone</h4>
+                                <p>+984-55-549-19-45</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="icon"><img src="~/Users/assets/images/index/contact/mail.png" alt=""></div>
+                            <div class="text">
+                                <h4>Email</h4>
+                                <p>DMS@soluton.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact_box">
+                    <form id="contact" action="" method="post">
+                        <fieldset>
+                            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                        </fieldset>
+                        <fieldset>
+                            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                        </fieldset>
+                        <fieldset class="bttn_submit">
+                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+<!-- END MAIN -->
+@section Scripts{
+    <script src="/Users/assets/js/HomeLoadMore.js"></script>
 }

@@ -1,0 +1,15 @@
+﻿@using DMS.az.ViewModels.Home
+@model HomeLoadMoreVM
+
+@foreach (var item in Model.Services)
+{
+    <div class="info">
+        <img src="~/Users/images/@item.Icon" alt="">
+        <h3>@item.Name</h3>
+        <p>
+            @item.ShortDesc
+        </p>
+    </div>
+}
+
+
