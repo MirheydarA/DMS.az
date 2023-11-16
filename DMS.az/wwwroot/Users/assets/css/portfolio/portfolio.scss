@@ -351,6 +351,79 @@ body {
   }
 }
 
+@media (min-width: 1115px) and (max-width: 1350px) {
+  #portfolio .title {
+    padding-top: 7rem;
+}
+#portfolio .title h2 {
+    font-size: 46px;
+    color: white;
+    padding-bottom: 0.8rem;
+    font-family: Montserrat-Bold;
+}
+}
+
+@media (min-width: 710px) and (max-width: 1115px) {
+  #portfolio .title {
+    padding-top: 7rem;
+}
+#portfolio .title h2 {
+    font-size: 40px;
+    color: white;
+    padding-bottom: 0.8rem;
+    font-family: Montserrat-Bold;
+}
+}
+
+@media (min-width: 487px) and (max-width: 710px) {
+  #portfolio .title {
+    padding-top: 7rem;
+}
+#portfolio .title h2 {
+    font-size: 38px;
+    color: white;
+    padding-bottom: 0.8rem;
+    font-family: Montserrat-Bold;
+}
+}
+
+@media (min-width: 420px) and (max-width: 487px) {
+  #portfolio .title {
+    padding-top: 7rem;
+}
+#portfolio .title h2 {
+    font-size: 36px;
+    color: white;
+    padding-bottom: 0.8rem;
+    font-family: Montserrat-Bold;
+}
+}
+
+@media (min-width: 400px) and (max-width: 420px) {
+  #portfolio .title {
+    padding-top: 7rem;
+}
+#portfolio .title h2 {
+    font-size: 30px;
+    color: white;
+    padding-bottom: 0.8rem;
+    font-family: Montserrat-Bold;
+}
+}
+
+@media (min-width: 360px) and (max-width: 400px) {
+  #portfolio .title {
+    padding-top: 7rem;
+}
+#portfolio .title h2 {
+    font-size: 26px;
+    color: white;
+    padding-bottom: 0.8rem;
+    font-family: Montserrat-Bold;
+}
+}
+
+
 // ------------END MAIN------------
 
 // ------------START FOOTER------------

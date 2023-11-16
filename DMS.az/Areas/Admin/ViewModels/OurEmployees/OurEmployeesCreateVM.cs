@@ -6,6 +6,6 @@ namespace DMS.az.Areas.Admin.ViewModels.OurEmployees
     {
         [Required]
         public IFormFile Photo { get; set; }
-        public string RedirectLink { get; set; }
+        public string? RedirectLink { get; set; }
     }
 }

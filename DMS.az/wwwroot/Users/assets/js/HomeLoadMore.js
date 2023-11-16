@@ -1,45 +1,31 @@
-﻿//$(function () {
-//    var skipRow = 1;
-
-//    $('#loadMore').on('click', function () {
-//        $.ajax({
-//            url: "/home/loadmore",
-//            type: "GET",
-//            data: {
-//                skipRow: skipRow
-//            },
-//            contentType: "application/json",
-//            success: function (Response) {
-//                $('#services-container').append(Response);
-//                skipRow++;
-//            }
-//        })
-//    })
-//})
-
-$(function () {
+﻿$(function () {
     var skipRow = 1;
-
     $('#loadMore').on('click', function () {
+
+        var dataTotalServices = $(this).data('count');
+
+
         $.ajax({
             url: "/home/loadmore",
             type: "GET",
             data: {
-                skipRow: skipRow
+                skipRow: skipRow,
             },
             contentType: "application/json",
             success: function (response) {
                 $('#services-container').append(response);
 
-                // Check if there are more services
-                //if (!response.hasMoreServices) {
-                //    alert()
-                //    $('#loadMore').hide();
-                //}
-                console.log(response.hasMoreServices)
+                console.log(dataTotalServices);
+
+                if (dataTotalServices < (skipRow+1)*3) {
+                    $('#loadMore').hide();
+
+                }
 
                 skipRow++;
             }
         });
     });
 });
+
+

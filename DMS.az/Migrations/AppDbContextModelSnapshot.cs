@@ -51,6 +51,10 @@ namespace DSM.az.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Photo3")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("AboutUs");
@@ -112,7 +116,6 @@ namespace DSM.az.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RedirectLink")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

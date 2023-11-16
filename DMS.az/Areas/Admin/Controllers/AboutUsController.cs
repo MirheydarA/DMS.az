@@ -43,6 +43,7 @@ namespace DMS.az.Areas.Admin.Controllers
             {
                 PhotoName1 = aboutUs.Photo1,
                 PhotoName2 = aboutUs.Photo2,
+                PhotoName3 = aboutUs.Photo3,
                 Description = aboutUs.Description,
             };
 
@@ -89,6 +90,23 @@ namespace DMS.az.Areas.Admin.Controllers
                 }
                 _fileService.Delete(aboutUs.Photo2);
                 aboutUs.Photo2 = _fileService.Upload(model.Photo2);
+            }
+
+            if (model.Photo3 is not null)
+            {
+                if (!_fileService.IsImage(model.Photo3))
+                {
+                    ModelState.AddModelError("Photo3", "Fayl formatı yalnışdır");
+                    return View();
+                }
+
+                if (!_fileService.IsBiggerThanSize(model.Photo3, 2000))
+                {
+                    ModelState.AddModelError("Photo3", "Faylın ölçüsü 2MB-dan böyükdür");
+                    return View();
+                }
+                _fileService.Delete(aboutUs.Photo3);
+                aboutUs.Photo3 = _fileService.Upload(model.Photo3);
             }
 
             aboutUs.Description = model.Description;

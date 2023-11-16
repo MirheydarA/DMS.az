@@ -123,3 +123,43 @@
 
 </script>
 
+
+<script>
+    $(document).on("change", ".imgInput3", function (e) {
+        let file = e.target.files[0];
+        let reader = new FileReader();
+
+        if (file.type.includes('image')) {
+            reader.readAsDataURL(file);
+
+            reader.onload = () => {
+                console.log(reader.result);
+                var div = document.getElementById("imgPreview3");
+                let image = document.createElement("img");
+                image.setAttribute("src", reader.result);
+                image.setAttribute("width", '100');
+
+                div.innerHTML = "";
+                div.appendChild(image);
+            }
+        }
+        else if (file.type.includes('video')) {
+            reader.readAsDataURL(file);
+
+            reader.onload = () => {
+                console.log(reader.result);
+                var videoDiv = document.getElementById("videoPreview");
+                let video = document.createElement("video");
+                video.setAttribute("src", reader.result);
+                video.setAttribute("controls", true);
+
+                var div = document.getElementById("imgPreview");
+                div.innerHTML = "";
+
+                videoDiv.innerHTML = "";
+                videoDiv.appendChild(video);
+            }
+        }
+    });
+
+</script>

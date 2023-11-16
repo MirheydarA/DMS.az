@@ -26,6 +26,7 @@ namespace DSM.az.Utilities
                 {
                     Photo1 = "asdasd",
                     Photo2 = "sdasdas",
+                    Photo3 = "sdasdas",
                     Description = "asdasdadsdasdasdasdadssdasdasdadsdasdasdasdadssdasdasdadsdasdasdasdadssdasdasdadsdasdasdasdadssdasdasdadsdasdasdasdadssd",
                     CreatedAt = DateTime.Now,
                 };

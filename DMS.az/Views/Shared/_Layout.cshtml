@@ -7,49 +7,42 @@
     <link rel="icon" href="~/Users/assets/images/index/logo-icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="~/Users/assets/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="~/Users/assets/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="~/Users/assets/css/index/index.css" />
+    @RenderSection("links", required:false)
 </head>
 <body>
     <!-- START HEADER -->
-    <header style="background-image: url(/Users/assets/images/index/header_welcome.png);
-        background-repeat: no-repeat; background-size: cover; height: 81rem;">
-        <div class="container">
-            <section id="navbar-area">
+    <div class="container">
+        <section id="navbar-area">
 
-                <nav class="navbar">
-                    <!-- LOGO -->
-                    <div class="logo"><img src="~/Users/assets/images/index/logo.png" alt=""></div>
+            <nav class="navbar">
+                <!-- LOGO -->
+                <div class="logo"><img src="~/Users/assets/images/index/logo.png" alt=""></div>
 
-                    <!-- NAVIGATION MENU -->
-                    <ul class="nav-links">
+                <!-- NAVIGATION MENU -->
+                <ul class="nav-links">
 
-                        <!-- USING CHECKBOX HACK -->
-                        <input type="checkbox" id="checkbox_toggle" />
-                        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-                        <!-- NAVIGATION MENUS -->
-                        <div class="menu">
+                    <!-- NAVIGATION MENUS -->
+                    <div class="menu">
 
-                        <li><a asp-action="index" asp-controller="home"><span>Əsas səhifə</span></a></li>
-                        <li><a href="/"><span>Haqqımızda</span></a></li>
-                        <li><a href="/"><span>Portfolio</span></a></li>
-                        <li><a href="/"><span>Xidmətlər</span></a></li>
-                        <li><a href="/"><span>Karyera V2</span></a></li>
-                        <li><a href="/"><span>Əlaqə</span></a></li>
-        </div>
-        </ul>
-        </nav>
+                    <li><a asp-action="index" asp-controller="home"><span>Əsas səhifə</span></a></li>
+                    <li><a asp-action="index" asp-controller="aboutus"><span>Haqqımızda</span></a></li>
+                    <li><a asp-action="index" asp-controller="portfolio"><span>Portfolio</span></a></li>
+                    <li><a asp-action="index" asp-controller="services"><span>Xidmətlər</span></a></li>
+                    <li><a asp-action="index" asp-controller=""><span>Karyera V2</span></a></li>
+                    <li><a asp-action="index" asp-controller="contact"><span>Əlaqə</span></a></li>
+    </div>
+    </ul>
+    </nav>
 
-        </section>
+    </section>
 
-        <section id="nav-title">
-            <div class="nav-title"><h1>Digital Marketing Solution</h1></div>
-        </section>
-        </div>
-    </header>
+    </div>
     <!-- END HEADER -->
-
-                        @RenderBody()
+    @RenderBody()
 
     <!-- START FOOTER -->
     <footer>
@@ -60,11 +53,11 @@
                         <h4>Product</h4>
                         <ul>
                             <li><a href="#">Landing Page</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a asp-action="index" asp-controller="aboutus">About us</a></li>
+                            <li><a asp-action="index" asp-controller="services">Services</a></li>
                             <li><a href="#">Statistic</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a asp-action="index" asp-controller="portfolio">Portfolio</a></li>
+                            <li><a asp-action="index" asp-controller="contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -78,6 +71,7 @@
                             <li><a href="#">Graphic Designer</a></li>
                         </ul>
                     </div>
+
                     <div class="footer-col">
                         <h4>Collaborators</h4>
                         <ul>
@@ -86,6 +80,7 @@
                             <li><a href="#">FAQs coming soon</a></li>
                         </ul>
                     </div>
+
                     <div class="footer-col">
 
                         <h4>Contact</h4>

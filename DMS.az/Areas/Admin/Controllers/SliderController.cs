@@ -53,7 +53,7 @@ namespace DSM.az.Areas.Admin.Controllers
                     return View();
                 }
 
-                if (!_fileService.IsBiggerThanSize(model.MediaName, 2000))
+                if (!_fileService.IsBiggerThanSize(model.MediaName, 80000))
                 {
                     ModelState.AddModelError("MediaName", "Faylın ölçüsü 2MB-dan böyükdür");
                     return View();

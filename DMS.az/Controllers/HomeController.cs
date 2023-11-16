@@ -15,13 +15,16 @@ namespace DMS.az.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            ViewBag.ServicesCount = _context.Services.Count();
+
             var model = new HomeIndexVM
             {
                 Sliders = await _context.Sliders.Where(x => !x.IsDeleted).ToListAsync(),
                 AboutUs = await _context.AboutUs.Where(x => !x.IsDeleted).ToListAsync(),
                 Portfolios = await _context.Portfolios.Where(x => !x.IsDeleted).ToListAsync(),
                 Services = await _context.Services.Where(x => !x.IsDeleted).OrderByDescending(x => x.Id).Take(3).ToListAsync(),
-                OurEmployees = await _context.OurEmployees.Where(x => !x.IsDeleted).ToListAsync()
+                OurEmployees = await _context.OurEmployees.Where(x => !x.IsDeleted).ToListAsync(),
+                Contact = await _context.Contact.ToListAsync(),
             };
 
             return View(model);
@@ -32,11 +35,8 @@ namespace DMS.az.Controllers
 
             var model = new HomeLoadMoreVM
             {
-                Services = await _context.Services.OrderByDescending(x => x.Id).Skip(3*skipRow).Take(3).ToListAsync()
+                Services = await _context.Services.OrderByDescending(x => x.Id).Skip(3 * skipRow).Take(3).ToListAsync()
             };
-
-            model.HasMoreServices = _context.Services.Count() > 3 * (skipRow + 1);
-
 
             return PartialView("_ServicesComponentPartial", model);
         }
