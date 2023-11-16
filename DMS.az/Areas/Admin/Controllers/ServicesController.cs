@@ -1,8 +1,6 @@
 ﻿using DMS.az.Areas.Admin.ViewModels.Services;
 using DMS.az.DAL;
 using DMS.az.Models;
-using DSM.az.Areas.Admin.ViewModels.Portfolio;
-using DSM.az.Models;
 using DSM.az.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

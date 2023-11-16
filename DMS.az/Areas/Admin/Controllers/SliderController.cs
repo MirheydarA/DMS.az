@@ -59,7 +59,7 @@ namespace DSM.az.Areas.Admin.Controllers
                     return View();
                 }
 
-                var sliderByType = await _context.Sliders.FirstOrDefaultAsync(s => s.Type == Enums.SliderContentType.Video && !s.IsDeleted);
+                var sliderByType = await _context.Sliders.FirstOrDefaultAsync(s => s.Type == DMS.az.Enums.SliderContentType.Video && !s.IsDeleted);
 
                 if (sliderByType is not null)
                 {
@@ -82,7 +82,7 @@ namespace DSM.az.Areas.Admin.Controllers
                     return View();
                 }
 
-                var sliderByType = await _context.Sliders.FirstOrDefaultAsync(s => s.Type == Enums.SliderContentType.Photo && !s.IsDeleted);
+                var sliderByType = await _context.Sliders.FirstOrDefaultAsync(s => s.Type == DMS.az.Enums.SliderContentType.Photo && !s.IsDeleted);
 
                 if (sliderByType is not null)
                 {
@@ -148,7 +148,7 @@ namespace DSM.az.Areas.Admin.Controllers
                         return View();
                     }
 
-                    var sliderByType = await _context.Sliders.Where(s => s.Id != id).FirstOrDefaultAsync(s => s.Type == Enums.SliderContentType.Video && !s.IsDeleted );
+                    var sliderByType = await _context.Sliders.Where(s => s.Id != id).FirstOrDefaultAsync(s => s.Type == DMS.az.Enums.SliderContentType.Video && !s.IsDeleted );
 
                     if (sliderByType is not null)
                     {
@@ -171,7 +171,7 @@ namespace DSM.az.Areas.Admin.Controllers
                         return View();
                     }
 
-                    var sliderByType = await _context.Sliders.Where(s => s.Id != id).FirstOrDefaultAsync(s => s.Type == Enums.SliderContentType.Photo && !s.IsDeleted);
+                    var sliderByType = await _context.Sliders.Where(s => s.Id != id).FirstOrDefaultAsync(s => s.Type == DMS.az.Enums.SliderContentType.Photo && !s.IsDeleted);
 
                     if (sliderByType is not null)
                     {

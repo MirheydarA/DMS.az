@@ -1,4 +1,4 @@
-﻿using DSM.az.Enums;
+﻿using DMS.az.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace DSM.az.Areas.Admin.ViewModels.Slider

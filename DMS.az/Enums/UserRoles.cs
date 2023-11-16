@@ -1,4 +1,4 @@
-﻿namespace DSM.az.Enums
+﻿namespace DMS.az.Enums
 {
     public enum UserRoles
     {

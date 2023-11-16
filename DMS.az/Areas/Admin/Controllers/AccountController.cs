@@ -1,5 +1,5 @@
 ﻿using DSM.az.Areas.Admin.ViewModels.Account;
-using DSM.az.Enums;
+using DMS.az.Enums;
 using DSM.az.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

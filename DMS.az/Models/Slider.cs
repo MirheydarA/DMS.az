@@ -1,5 +1,5 @@
-﻿using DSM.az.Enums;
-using DSM.az.Models.Base;
+﻿using DMS.az.Enums;
+using DMS.az.Models.Base;
 
 namespace DSM.az.Models
 {

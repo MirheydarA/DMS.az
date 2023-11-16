@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata.Ecma335;
 
-namespace DSM.az.Areas.Admin.ViewModels.Portfolio
+namespace DMS.az.Areas.Admin.ViewModels.Portfolio
 {
     public class PortfolioCreateVM
     {

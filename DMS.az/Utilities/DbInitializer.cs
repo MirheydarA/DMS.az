@@ -1,6 +1,6 @@
 ﻿using DMS.az.DAL;
 using DMS.az.Models;
-using DSM.az.Enums;
+using DMS.az.Enums;
 using DSM.az.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

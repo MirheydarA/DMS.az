@@ -7,9 +7,9 @@ namespace DMS.az.ViewModels.Home
     {
         public List<Slider> Sliders { get; set; }
         public List<Models.AboutUs> AboutUs { get; set; }
-        public List<Portfolio> Portfolios { get; set; }
+        public List<Models.Portfolio> Portfolios { get; set; }
         public List<Service> Services { get; set; }
         public List<OurEmployee> OurEmployees { get; set; }
-        public List<Contact> Contact { get; set; }
+        public List<Models.Contact> Contact { get; set; }
     }
 }

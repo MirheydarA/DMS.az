@@ -1,4 +1,4 @@
-﻿namespace DSM.az.Models.Base
+﻿namespace DMS.az.Models.Base
 {
     public class BaseEntity
     {

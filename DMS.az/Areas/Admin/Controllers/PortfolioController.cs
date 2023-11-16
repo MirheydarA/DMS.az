@@ -1,7 +1,6 @@
-﻿using DMS.az.DAL;
-using DSM.az.Areas.Admin.ViewModels.Portfolio;
-using DSM.az.Areas.Admin.ViewModels.Slider;
-using DSM.az.Models;
+﻿using DMS.az.Areas.Admin.ViewModels.Portfolio;
+using DMS.az.DAL;
+using DMS.az.Models;
 using DSM.az.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

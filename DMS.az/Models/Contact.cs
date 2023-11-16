@@ -1,4 +1,4 @@
-﻿using DSM.az.Models.Base;
+﻿using DMS.az.Models.Base;
 
 namespace DMS.az.Models
 {

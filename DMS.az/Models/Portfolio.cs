@@ -1,6 +1,6 @@
-﻿using DSM.az.Models.Base;
+﻿using DMS.az.Models.Base;
 
-namespace DSM.az.Models
+namespace DMS.az.Models
 {
     public class Portfolio : BaseEntity
     {

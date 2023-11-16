@@ -1,4 +1,4 @@
-﻿namespace DSM.az.Areas.Admin.ViewModels.Portfolio
+﻿namespace DMS.az.Areas.Admin.ViewModels.Portfolio
 {
     public class PortfolioIndexVM
     {
