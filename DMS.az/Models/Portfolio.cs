@@ -8,5 +8,7 @@ namespace DMS.az.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string ShortDesc { get; set; }
+        public PortfolioCategory PortfolioCategory { get; set; }
+        public int PortfolioCategoryId { get; set; }
     }
 }

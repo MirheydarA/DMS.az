@@ -16,6 +16,7 @@
                 <tr>
                     <th>Şəkil</th>
                     <th>Başlıq</th>
+                    <th>Kateqoriya</th>
                     <th>Status</th>
                     <th>Actions</th>
                 </tr>
@@ -30,6 +31,7 @@
 
                             <td class=""><img src="~/Users/images/@item.Photo" alt="image" /></td>
                             <td>@item.Title</td>
+                            <td>@item.PortfolioCategory.Name</td>
                             <td>
                                 @if (!item.IsDeleted)
                                 {

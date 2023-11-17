@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/fJQ79iOKbBRSeKMap3FyVPZRVpPJL0joDcSlt2dULU=",
+  "Hash": "/qs5Izuk+HH/QdpedROUrtr/V5KyXwbfTDDJuq2rFe0=",
   "Source": "DMS.az",
   "BasePath": "_content/DMS.az",
   "Mode": "Default",
@@ -14603,6 +14603,23 @@
       "OriginalItemSpec": "wwwroot\\Users\\images\\24d4ae23-d1a6-42e4-8ab7-21ebbb1e1f22_9.jpg"
     },
     {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\2734ecdd-f436-4fb4-8fa2-5c0b9706d419_logo2.png",
+      "SourceId": "DMS.az",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\",
+      "BasePath": "_content/DMS.az",
+      "RelativePath": "Users/images/2734ecdd-f436-4fb4-8fa2-5c0b9706d419_logo2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\images\\2734ecdd-f436-4fb4-8fa2-5c0b9706d419_logo2.png"
+    },
+    {
       "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\2c97edf2-4663-4c48-88cf-1271c0e79fbc_9.jpg",
       "SourceId": "DMS.az",
       "SourceType": "Discovered",
@@ -14671,6 +14688,23 @@
       "OriginalItemSpec": "wwwroot\\Users\\images\\2ed503f6-48b0-4d8d-ab44-0d543e1997b2_DataStructuresCerficate.png"
     },
     {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\42690b8c-ded7-4ac9-bd9b-27fd70797ef3_logo2.png",
+      "SourceId": "DMS.az",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\",
+      "BasePath": "_content/DMS.az",
+      "RelativePath": "Users/images/42690b8c-ded7-4ac9-bd9b-27fd70797ef3_logo2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\images\\42690b8c-ded7-4ac9-bd9b-27fd70797ef3_logo2.png"
+    },
+    {
       "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\440092cc-ee68-4ae1-bbe6-9f504220e5a4_logo.png",
       "SourceId": "DMS.az",
       "SourceType": "Discovered",
@@ -14686,6 +14720,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Users\\images\\440092cc-ee68-4ae1-bbe6-9f504220e5a4_logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\44782af4-71a2-4595-b9cf-5d4342dd7fa7_logo2.png",
+      "SourceId": "DMS.az",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\",
+      "BasePath": "_content/DMS.az",
+      "RelativePath": "Users/images/44782af4-71a2-4595-b9cf-5d4342dd7fa7_logo2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\images\\44782af4-71a2-4595-b9cf-5d4342dd7fa7_logo2.png"
     },
     {
       "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\4a3deff9-5750-4891-b461-a8fc034dbc52_graphic_d_icon.png",
@@ -14824,6 +14875,23 @@
       "OriginalItemSpec": "wwwroot\\Users\\images\\83fa3cd4-4259-4b10-b337-66267f5932af_graphic_d_icon.png"
     },
     {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\85427a6c-ab2e-4620-b1c6-91c126b73f20_logo.png",
+      "SourceId": "DMS.az",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\",
+      "BasePath": "_content/DMS.az",
+      "RelativePath": "Users/images/85427a6c-ab2e-4620-b1c6-91c126b73f20_logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\images\\85427a6c-ab2e-4620-b1c6-91c126b73f20_logo.png"
+    },
+    {
       "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\86270857-31e6-411a-bc73-dcf2bdddd78d_graphic_d_icon.png",
       "SourceId": "DMS.az",
       "SourceType": "Discovered",
@@ -14924,6 +14992,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Users\\images\\9d393605-c688-4db8-b78d-dc8bb24cd4ab_graphic_d_icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\9e0ed9af-8b39-47c5-a73f-e059335b660a_teamwork.png",
+      "SourceId": "DMS.az",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\",
+      "BasePath": "_content/DMS.az",
+      "RelativePath": "Users/images/9e0ed9af-8b39-47c5-a73f-e059335b660a_teamwork.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\images\\9e0ed9af-8b39-47c5-a73f-e059335b660a_teamwork.png"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\b2bebe41-9435-4333-a921-0650be1146fd_logo2.png",
+      "SourceId": "DMS.az",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\",
+      "BasePath": "_content/DMS.az",
+      "RelativePath": "Users/images/b2bebe41-9435-4333-a921-0650be1146fd_logo2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\images\\b2bebe41-9435-4333-a921-0650be1146fd_logo2.png"
     },
     {
       "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\b4460d53-de03-48ed-bd1c-0f710772401c_logo.png",

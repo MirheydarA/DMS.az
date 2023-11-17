@@ -110,17 +110,21 @@
         </section>
 
         <section id="portfolio_h">
-            <div class="container">
-                <div class="title"><h2>PORTFOLİO</h2></div>
 
-                <div class="slider">
-                    @foreach (var item in Model.Portfolios)
-                    {
+            @if (Model.Portfolios.Count != 0)
+            {
+                <div class="container">
+                    <div class="title"><h2>PORTFOLİO</h2></div>
 
-                        <img src="~/Users/images/@item.Photo" alt="">
-                    }
+                    <div class="slider">
+                        @foreach (var item in Model.Portfolios)
+                        {
+
+                            <img src="~/Users/images/@item.Photo" alt="">
+                        }
+                    </div>
                 </div>
-            </div>
+            }
 
         </section>
 

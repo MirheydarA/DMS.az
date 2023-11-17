@@ -3,6 +3,7 @@ using DMS.az.DAL;
 using DMS.az.Models;
 using DSM.az.Utilities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace DSM.az.Areas.Admin.Controllers
@@ -26,7 +27,7 @@ namespace DSM.az.Areas.Admin.Controllers
         {
             model = new PortfolioIndexVM
             {
-                Portfolios = await _context.Portfolios.OrderByDescending(s => s.Id).Where(s => !s.IsDeleted).ToListAsync(),
+                Portfolios = await _context.Portfolios.Include(p => p.PortfolioCategory).OrderByDescending(s => s.Id).Where(s => !s.IsDeleted).ToListAsync(),
             };
 
             return View(model);
@@ -37,12 +38,31 @@ namespace DSM.az.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+
+            var model = new PortfolioCreateVM
+            {
+                PortfolioCategories = _context.PortfolioCategories.Where(pc => !pc.IsDeleted).Select(pc => new SelectListItem
+                {
+                    Text = pc.Name,
+                    Value = pc.Id.ToString(),
+                }).ToList()
+            };
+
+            return View(model);
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(PortfolioCreateVM model)
         {
+            var portfoliocategoryList = await _context.PortfolioCategories.Where(pc => !pc.IsDeleted).ToListAsync();
+
+            model.PortfolioCategories = portfoliocategoryList.Select(x => new SelectListItem
+            {
+                Text = x.Name,
+                Value = x.Id.ToString(),
+            }).ToList();
+
+
             if (!ModelState.IsValid) return View();
 
             if (!_fileService.IsImage(model.Photo))
@@ -63,6 +83,7 @@ namespace DSM.az.Areas.Admin.Controllers
                 Description = model.Description,
                 ShortDesc = model.ShortDesc,
                 Photo = _fileService.Upload(model.Photo),
+                PortfolioCategoryId = model.PortfolioCategoryId,
                 CreatedAt = DateTime.Now
             };
 
@@ -82,10 +103,18 @@ namespace DSM.az.Areas.Admin.Controllers
 
             var model = new PortfolioUpdateVM
             {
+                PortfolioCategories = _context.PortfolioCategories.Where(pc => !pc.IsDeleted).Select(pc => new SelectListItem
+                {
+                    Text = pc.Name,
+                    Value = pc.Id.ToString(),
+                }).ToList(),
+
+
                 Title = portfolio.Title,
                 Description = portfolio.Description,
                 ShortDesc = portfolio.ShortDesc,
-                PhotoPath = portfolio.Photo
+                PhotoPath = portfolio.Photo,
+                PortfolioCategoryId= portfolio.PortfolioCategoryId,
             };
 
             return View(model);
@@ -97,6 +126,11 @@ namespace DSM.az.Areas.Admin.Controllers
             var portfolio = _context.Portfolios.FirstOrDefault(s => s.Id == id);
             if (portfolio is null) return NotFound("Portfolio Tapılmadı!");
 
+            model.PortfolioCategories = _context.PortfolioCategories.Where(pc => !pc.IsDeleted).Select(pc => new SelectListItem
+            {
+                Text = pc.Name,
+                Value = pc.Id.ToString(),
+            }).ToList(); 
 
             if (!ModelState.IsValid) return View();
 
@@ -120,6 +154,7 @@ namespace DSM.az.Areas.Admin.Controllers
             portfolio.Title = model.Title;
             portfolio.Description = model.Description;
             portfolio.ShortDesc = model.ShortDesc;
+            portfolio.PortfolioCategoryId = model.PortfolioCategoryId;
             portfolio.ModifiedAt = DateTime.Now;
 
             _context.Portfolios.Update(portfolio);
