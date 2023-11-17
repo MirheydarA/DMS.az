@@ -1,4 +1,5 @@
 ﻿using DMS.az.DAL;
+using DMS.az.Models;
 using DMS.az.ViewModels.Portfolio;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -17,9 +18,28 @@ namespace DMS.az.Controllers
         {
             var model = new PortfolioIndexVM
             {
-                Portfolio = await _context.Portfolios.ToListAsync()
+                Portfolio = await _context.Portfolios.Where(p => !p.IsDeleted).Include(p => p.PortfolioCategory).ToListAsync(),
+                PortfolioCategories = await _context.PortfolioCategories.Where(pc => !pc.IsDeleted).ToListAsync(),
             };
             return View(model);
         }
+
+        public async Task<IActionResult> TabMenu(int id)
+        {
+            IQueryable<Portfolio> portfolios = _context.Portfolios.Where(p => !p.IsDeleted).Include(p => p.PortfolioCategory);
+
+            if (id > 0)
+            {
+                portfolios = portfolios.Where(p => p.PortfolioCategoryId == id);
+            }
+
+            var model = new PortfolioTabMenuVM
+            {
+                Portfolios = await portfolios.ToListAsync()
+            };
+
+            return PartialView("_PortfolioTabMenuPartial", model.Portfolios);
+        }
+
     }
 }

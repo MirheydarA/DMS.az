@@ -17,7 +17,7 @@ namespace DMS.az.Controllers
 		{
 			var model = new ServicesIndexVM
 			{
-				Services = await _context.Services.OrderByDescending(x => x.Id).ToListAsync(),
+				Services = await _context.Services.Where(s => !s.IsDeleted).OrderByDescending(x => x.Id).ToListAsync(),
 			};
 
 			return View(model);

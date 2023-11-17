@@ -135,7 +135,6 @@ namespace DSM.az.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -148,9 +147,6 @@ namespace DSM.az.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PortfoliCategoryId")
-                        .HasColumnType("int");
-
                     b.Property<int>("PortfolioCategoryId")
                         .HasColumnType("int");
 
@@ -159,7 +155,6 @@ namespace DSM.az.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
