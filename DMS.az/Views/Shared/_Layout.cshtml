@@ -11,36 +11,43 @@
 </head>
 <body>
     <!-- START HEADER -->
-    <div class="container">
-        <section id="navbar-area">
+    <header>
+        <section id="navbar_background">
+            <div class="container">
+                <section id="navbar-area">
 
-            <nav class="navbar">
-                <!-- LOGO -->
-                <div class="logo"><img src="~/Users/assets/images/index/logo.png" alt=""></div>
+                    <nav class="navbar">
+                        <!-- LOGO -->
+                        <div class="logo"><img src="./assets/images/index/logo.png" alt=""></div>
 
-                <!-- NAVIGATION MENU -->
-                <ul class="nav-links">
+                        <!-- NAVIGATION MENU -->
+                        <ul class="nav-links">
 
-                    <!-- USING CHECKBOX HACK -->
-                    <input type="checkbox" id="checkbox_toggle" />
-                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                            <!-- USING CHECKBOX HACK -->
+                            <input type="checkbox" id="checkbox_toggle" />
+                            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-                    <!-- NAVIGATION MENUS -->
-                    <div class="menu">
+                            <!-- NAVIGATION MENUS -->
+                            <div class="menu">
+                            <li><a asp-action="index" asp-controller="home"><span>Əsas səhifə</span></a></li>
+                            <li><a asp-action="index" asp-controller="aboutus"><span>Haqqımızda</span></a></li>
+                            <li><a asp-action="index" asp-controller="portfolio"><span>Portfolio</span></a></li>
+                            <li><a asp-action="index" asp-controller="services"><span>Xidmətlər</span></a></li>
+                            <li><a asp-action="" asp-controller=""><span>Karyera V2</span></a></li>
+                            <li><a asp-action="index" asp-controller="contact"><span>Əlaqə</span></a></li>
+            </div>
+            </ul>
+            </nav>
 
-                    <li><a asp-action="index" asp-controller="home"><span>Əsas səhifə</span></a></li>
-                    <li><a asp-action="index" asp-controller="aboutus"><span>Haqqımızda</span></a></li>
-                    <li><a asp-action="index" asp-controller="portfolio"><span>Portfolio</span></a></li>
-                    <li><a asp-action="index" asp-controller="services"><span>Xidmətlər</span></a></li>
-                    <li><a asp-action="index" asp-controller=""><span>Karyera V2</span></a></li>
-                    <li><a asp-action="index" asp-controller="contact"><span>Əlaqə</span></a></li>
-    </div>
-    </ul>
-    </nav>
+        </section>
+        <!-- <section id="nav-title">
+          <div class="nav-title"><h1>Digital Marketing Solution</h1></div>
+        </section> -->
+        </div>
+    </header>
 
-    </section>
 
-    </div>
+    <!-- END HEADER -->
     <!-- END HEADER -->
     @RenderBody()
 

@@ -4,6 +4,12 @@
 @section links{
     <link rel="stylesheet" href="~/Users/assets/css/contact-us/contact-us.css" />
 
+    <!-- Toastr JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="~/Users/assets/StyleSheet.css">
+    <!-- -------- -->
 }
 
 <!-- START MAIN -->
@@ -46,16 +52,17 @@
                 </div>
 
                 <div class="contact_box">
-                    <form id="contact" action="" method="post">
+                    <form id="contact" asp-action="index" asp-controller="contact" method="post">
                         <fieldset>
-                            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                            <input asp-for="SenderName" placeholder="Your name" type="text" tabindex="1" autofocus>
                         </fieldset>
                         <fieldset>
-                            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                            <input asp-for="SenderEmail" placeholder="Your Email Address" type="email" tabindex="2" required>
                         </fieldset>
                         <fieldset>
-                            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                            <textarea asp-for="Content" placeholder="Type your message here...." tabindex="5" required></textarea>
                         </fieldset>
+
                         <fieldset class="bttn_submit">
                             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                         </fieldset>
@@ -69,3 +76,18 @@
     </section>
 </main>
 <!-- END MAIN -->
+@section Scripts{
+    <script>
+        // Check for success message in TempData and show Toastr notification
+        var successMessage = '@TempData["SuccessMessage"]';
+        if (successMessage) {
+            toastr.success( successMessage, '', { positionClass: 'toast-bottom-right' });
+        }
+
+
+            document.getElementById('contact').reset();
+
+
+    </script>
+
+}

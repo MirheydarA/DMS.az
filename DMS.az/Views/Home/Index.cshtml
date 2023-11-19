@@ -1,319 +1,197 @@
 ﻿@using DMS.az.ViewModels.Home
 @model HomeIndexVM
 
-@{
-    Layout = null;
+@section links{
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/Users/assets/css/index/index.css" />
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Əsas səhifə</title>
-    <link rel="icon" href="~/Users/assets/images/index/logo-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="~/Users/assets/slick-1.8.1/slick/slick-theme.css">
-    <link rel="stylesheet" href="~/Users/assets/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="~/Users/assets/css/index/index.css" />
-</head>
-<body>
-    <!-- START HEADER -->
-    @foreach (var item in Model.Sliders)
-    {
-        <header style="background-image: url(/Users/images/@item.MediaPath); background-repeat: no-repeat; background-size: cover; height: 81rem;">
-            <div class="container">
-                <section id="navbar-area">
-
-                    <nav class="navbar">
-                        <!-- LOGO -->
-                        <div class="logo"><img src="~/Users/assets/images/index/logo.png" alt=""></div>
-
-                        <!-- NAVIGATION MENU -->
-                        <ul class="nav-links">
-
-                            <!-- USING CHECKBOX HACK -->
-                            <input type="checkbox" id="checkbox_toggle" />
-                            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-
-                            <!-- NAVIGATION MENUS -->
-                            <div class="menu">
-
-                            <li><a asp-action="index" asp-controller="home"><span>Əsas səhifə</span></a></li>
-                            <li><a asp-action="index" asp-controller="aboutus"><span>Haqqımızda</span></a></li>
-                            <li><a asp-action="index" asp-controller="portfolio"><span>Portfolio</span></a></li>
-                            <li><a asp-action="index" asp-controller="services"><span>Xidmətlər</span></a></li>
-                            <li><a asp-action="index" asp-controller=""><span>Karyera V2</span></a></li>
-                            <li><a asp-action="index" asp-controller="contact"><span>Əlaqə</span></a></li>
+<!-- START MAIN -->
+<main>
+    <section id="slider_header">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="~/Users/assets/images/index/header/slider1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="~/Users/assets/images/index/header/slider2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="~/Users/assets/images/index/header/slider3.jpg" alt=""></div>
             </div>
-            </ul>
-            </nav>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+   </section>
 
-            </section>
+    <section id="about_h">
+        <div class="container">
 
-            <section id="nav-title">
-                <div class="nav-title"><h1>@item.Title</h1></div>
-            </section>
-            </div>
-        </header>
-
-    }
-    <!-- END HEADER -->
-    <!-- START MAIN -->
-    <main>
-        <section id="about_h">
-            <div class="container">
-
-                @if (Model.AboutUs is not null)
-                {
-                    <div class="title"><h2>HAQQIMIZDA</h2></div>
-
-                    <div class="images">
-                        @foreach (var item in Model.AboutUs)
-                        {
-                            <div class="images-teamwork"><img src="~/Users/images/@item.Photo1" alt=""></div>
-
-                            <div class="images-office">
-                                <img src="~/Users/images/@item.Photo2" alt="">
-                                <img src="~/Users/images/@item.Photo3" alt="">
-                            </div>
-                        }
-                    </div>
-                }
-
-                <div class="content">
-                    <div class="about_us">
-                        <h5>Who we are</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore.
-                        </p>
-                    </div>
-                    <div class="about_us">
-                        <h5>Our Philosophy</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore.
-                        </p>
-                    </div>
-                    <div class="about_us">
-                        <h5>How we work</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio_h">
-
-            @if (Model.Portfolios.Count != 0)
+            @if (Model.AboutUs is not null)
             {
-                <div class="container">
-                    <div class="title"><h2>PORTFOLİO</h2></div>
+                <div class="title"><h2>HAQQIMIZDA</h2></div>
 
-                    <div class="slider">
-                        @foreach (var item in Model.Portfolios)
-                        {
-
-                            <img src="~/Users/images/@item.Photo" alt="">
-                        }
-                    </div>
-                </div>
-            }
-
-        </section>
-
-        <section id="services_h">
-            <div class="container">
-                <div class="title"><h2>XİDMƏTLƏR</h2></div>
-
-                <div id="services-container" class="services_info">
-                    @foreach (var item in Model.Services)
+                <div class="images">
+                    @foreach (var item in Model.AboutUs)
                     {
-                        <div class="info">
-                            <img src="~/Users/images/@item.Icon" alt="">
-                            <h3>@item.Name</h3>
-                            <p>
-                                @item.ShortDesc
-                            </p>
+                        <div class="images-teamwork"><img src="~/Users/images/@item.Photo1" alt=""></div>
+
+                        <div class="images-office">
+                            <img src="~/Users/images/@item.Photo2" alt="">
+                            <img src="~/Users/images/@item.Photo3" alt="">
                         </div>
                     }
                 </div>
-
-
-                <div class="more"><a id="loadMore" data-count="@ViewBag.ServicesCount" style="display: flex; align-items: center; justify-content:center" class="more_bttn">Daha çox</a></div>
-
-            </div>
-        </section>
-
-        <section id="colleagues_h">
-            @if (Model.OurEmployees is not null)
-            {
-                <div class="container">
-                    <div class="title"><h2>ƏMƏKDAŞLARIMIZ</h2></div>
-
-                    <div class="slider">
-                        @foreach (var item in Model.OurEmployees)
-                        {
-                            <img src="~/Users/images/@item.Photo" alt="">
-                        }
-                    </div>
-                </div>
             }
-        </section>
 
-        <section id="contact_h">
+            <div class="content">
+                <div class="about_us">
+                    <h5>Who we are</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore.
+                    </p>
+                </div>
+                <div class="about_us">
+                    <h5>Our Philosophy</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore.
+                    </p>
+                </div>
+                <div class="about_us">
+                    <h5>How we work</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio_h">
+
+        @if (Model.Portfolios.Count != 0)
+        {
             <div class="container">
-                <div class="title"><h2>BİZİMLƏ ƏLAQƏ</h2></div>
+                <div class="title"><h2>PORTFOLİO</h2></div>
 
-                <div class="contact_info">
+                <div class="slider">
+                    @foreach (var item in Model.Portfolios)
+                    {
+
+                        <img src="~/Users/images/@item.Photo" alt="">
+                    }
+                </div>
+            </div>
+        }
+
+    </section>
+
+    <section id="services_h">
+        <div class="container">
+            <div class="title"><h2>XİDMƏTLƏR</h2></div>
+
+            <div id="services-container" class="services_info">
+                @foreach (var item in Model.Services)
+                {
                     <div class="info">
-                        <ul>
-                            @foreach (var item in Model.Contact)
-                            {
-                                <li>
-                                    <div class="icon"><img src="~/Users/assets/images/index/contact/location.png" alt=""></div>
-                                    <div class="text">
-                                        <h4>Address</h4>
-                                        <p>@item.Address</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon"><img src="~/Users/assets/images/index/contact/phone.png" alt=""></div>
-                                    <div class="text">
-                                        <h4>Phone</h4>
-                                        <p>@item.PhoneNumber</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon"><img src="~/Users/assets/images/index/contact/mail.png" alt=""></div>
-                                    <div class="text">
-                                        <h4>Email</h4>
-                                        <p>@item.Email</p>
-                                    </div>
-                                </li>
-                            }
-                        </ul>
+                        <img src="~/Users/images/@item.Icon" alt="">
+                        <h3>@item.Name</h3>
+                        <p>
+                            @item.ShortDesc
+                        </p>
                     </div>
-
-                    <div class="contact_box">
-                        <form id="contact" action="" method="post">
-                            <fieldset>
-                                <input placeholder="Your name" type="text" tabindex="1" required>
-                            </fieldset>
-                            <fieldset>
-                                <input placeholder="Your Email Address" type="email" tabindex="2" required>
-                            </fieldset>
-                            <fieldset>
-                                <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-                            </fieldset>
-
-                            <fieldset class="bttn_submit">
-                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-
+                }
             </div>
-        </section>
-    </main>
-    <!-- END MAIN -->
-    <!-- START FOOTER -->
-    <footer>
-        <section id="footer">
+
+
+            <div class="more"><a id="loadMore" data-count="@ViewBag.ServicesCount" style="display: flex; align-items: center; justify-content:center" class="more_bttn">Daha çox</a></div>
+
+        </div>
+    </section>
+
+    <section id="colleagues_h">
+        @if (Model.OurEmployees is not null)
+        {
             <div class="container">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>Product</h4>
-                        <ul>
-                            <li><a href="#">Landing Page</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Statistic</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="#">Digital Marketing</a></li>
-                            <li><a href="#">SMM</a></li>
-                            <li><a href="#">Mobile Development</a></li>
-                            <li><a href="#">Web Development</a></li>
-                            <li><a href="#">UX/UI Designer</a></li>
-                            <li><a href="#">Graphic Designer</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Collaborators</h4>
-                        <ul>
-                            <li><a href="#">Azerbaijan NOC</a></li>
-                            <li><a href="#">Careers - coming soon</a></li>
-                            <li><a href="#">FAQs coming soon</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
+                <div class="title"><h2>ƏMƏKDAŞLARIMIZ</h2></div>
 
-                        <h4>Contact</h4>
-                        <div class="footer-contact">
-                            <ul>
-                                <li>
-                                    <div class="icon"><img src="~/Users/assets/images/index/footer/icon_loc.png" alt=""></div>
-                                    <div class="text">
-                                        <p>4671 Sugar Walley, road. Baku, Az 1126</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon"><img src="~/Users/assets/images/index/footer/icon_mail.png" alt=""></div>
-                                    <div class="text">
-                                        <p>+984-55-549-19-45</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="social-links">
-                            <h4>Follow us</h4>
-                            <a href="#"><img src="~/Users/assets/images/index/footer/icon_fb.png" alt=""></a>
-                            <a href="#"><img src="~/Users/assets/images/index/footer/icon_insta.png" alt=""></a>
-                            <a href="#"><img src="~/Users/assets/images/index/footer/icon_linkedin.png" alt=""></a>
-                            <a href="#"><img src="~/Users/assets/images/index/footer/icon_telegram.png" alt=""></a>
-                        </div>
-                    </div>
+                <div class="slider">
+                    @foreach (var item in Model.OurEmployees)
+                    {
+                        <img src="~/Users/images/@item.Photo" alt="">
+                    }
                 </div>
             </div>
-        </section>
+        }
+    </section>
 
-        <section id="footer_part2">
-            <div class="conatiner">
-                <ul>
-                    <li>Privacy Policy</li>
-                    <li>Terms of Use</li>
-                    <li>Sales and Refunds</li>
-                    <li>Legal</li>
-                    <li>Site Map</li>
-                </ul>
-                <p>© 2023 All Rights Reserved</p>
+    <section id="contact_h">
+        <div class="container">
+            <div class="title"><h2>BİZİMLƏ ƏLAQƏ</h2></div>
+
+            <div class="contact_info">
+                <div class="info">
+                    <ul>
+                        @foreach (var item in Model.Contact)
+                        {
+                            <li>
+                                <div class="icon"><img src="~/Users/assets/images/index/contact/location.png" alt=""></div>
+                                <div class="text">
+                                    <h4>Address</h4>
+                                    <p>@item.Address</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="icon"><img src="~/Users/assets/images/index/contact/phone.png" alt=""></div>
+                                <div class="text">
+                                    <h4>Phone</h4>
+                                    <p>@item.PhoneNumber</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="icon"><img src="~/Users/assets/images/index/contact/mail.png" alt=""></div>
+                                <div class="text">
+                                    <h4>Email</h4>
+                                    <p>@item.Email</p>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                <div class="contact_box">
+                    <form id="contact" action="" method="post">
+                        <fieldset>
+                            <input placeholder="Your name" type="text" tabindex="1" required>
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                        </fieldset>
+                        <fieldset>
+                            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                        </fieldset>
+
+                        <fieldset class="bttn_submit">
+                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-        </section>
-    </footer>
-    <!-- END FOOTER -->
 
+        </div>
+    </section>
+</main>
+<!-- END MAIN -->
+@section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/Users/assets/slick-1.8.1/slick/slick.min.js"></script>
     <script src="~/Users/assets/js/index/index.js"></script>
 
-    <script src="/Users/assets/js/HomeLoadMore.js"></script>k
+    <script src="/Users/assets/js/HomeLoadMore.js"></script>
 
-</body>
-</html>
+    }

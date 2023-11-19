@@ -20,6 +20,7 @@ namespace DMS.az.DAL
         public DbSet<OurEmployee> OurEmployees { get; set; }
         public DbSet<Contact> Contact { get; set; }
         public DbSet<AboutUs> AboutUs { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
     }
 }

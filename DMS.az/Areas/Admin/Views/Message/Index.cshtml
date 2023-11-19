@@ -1,0 +1,42 @@
+﻿@using DMS.az.Areas.Admin.ViewModels.Message
+@model MessageIndexVM
+
+<div class="card-body">
+    <h4 class="card-title">Basic Table</h4>
+    <p class="card-description">
+        Add class <code>.table</code>
+    </p>
+
+    <a class="btn btn-info mb-3" asp-action="Create" asp-controller="Portfolio">Create</a>
+
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">User Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Content</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (Model.Messages is not null)
+                {
+                    @foreach (var message in Model.Messages)
+                    {
+                        <tr>
+
+                            <td>@message.SenderName</td>
+                            <td>@message.SenderEmail</td>
+                            <td>@message.Content</td>
+                            <td><a href="mailto:@message.SenderEmail">Send Email</a></td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

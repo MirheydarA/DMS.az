@@ -63,18 +63,18 @@ namespace DSM.az.Areas.Admin.Controllers
             }).ToList();
 
 
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return View(model);
 
             if (!_fileService.IsImage(model.Photo))
             {
                 ModelState.AddModelError("MediaName", "Fayl formatı yalnışdır");
-                return View();
+                return View(model);
             }
 
             if (!_fileService.IsBiggerThanSize(model.Photo, 2000))
             {
                 ModelState.AddModelError("MediaName", "Faylın ölçüsü 2MB-dan böyükdür");
-                return View();
+                return View(model);
             }
 
             var portfolio = new Portfolio
@@ -114,7 +114,7 @@ namespace DSM.az.Areas.Admin.Controllers
                 Description = portfolio.Description,
                 ShortDesc = portfolio.ShortDesc,
                 PhotoPath = portfolio.Photo,
-                PortfolioCategoryId= portfolio.PortfolioCategoryId,
+                PortfolioCategoryId = portfolio.PortfolioCategoryId,
             };
 
             return View(model);
@@ -130,7 +130,7 @@ namespace DSM.az.Areas.Admin.Controllers
             {
                 Text = pc.Name,
                 Value = pc.Id.ToString(),
-            }).ToList(); 
+            }).ToList();
 
             if (!ModelState.IsValid) return View();
 
@@ -164,6 +164,25 @@ namespace DSM.az.Areas.Admin.Controllers
         }
 
         #endregion
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var portfolio = await _context.Portfolios.FirstOrDefaultAsync(p => p.Id == id);
+            if (portfolio == null) return NotFound("Portfolio Tapılmadı!");
+
+            var selectedPortfolio = new PortfolioDetailsVM()
+            {
+                Title = portfolio.Title,
+                Description = portfolio.Description,
+                ShortDesc = portfolio.ShortDesc,
+                PortfolioCategory = portfolio.PortfolioCategory,
+                Photo = portfolio.Photo,
+                CreatedAt = portfolio.CreatedAt,
+                ModifiedAt = portfolio.ModifiedAt,
+            };
+
+            return  View(selectedPortfolio);
+        }
 
         #region Delete
         [HttpGet]

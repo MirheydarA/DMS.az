@@ -1,4 +1,5 @@
 using DMS.az.DAL;
+using DMS.az.Utilities;
 using DSM.az.Models;
 using DSM.az.Utilities;
 using Microsoft.AspNetCore.Http.Features;
@@ -11,12 +12,13 @@ builder.Services.AddControllersWithViews();
 
 builder.WebHost.UseKestrel(options =>
 {
-    options.Limits.MaxRequestBodySize = 100 * 1024 * 1024; // Set to desired size in bytes
+    options.Limits.MaxRequestBodySize = 100 * 1024 * 1024;
 });
 
 
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 builder.Services.AddSingleton<IFileService, FileService>();
+builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 
 builder.Services.AddIdentity<User, IdentityRole>(options =>
@@ -52,6 +54,10 @@ builder.Services.ConfigureApplicationCookie(options =>
     };
 
 });
+
+var configuration = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+builder.Services.AddSingleton<EmailConfiguration>(configuration);
+
 
 var app = builder.Build();
 
