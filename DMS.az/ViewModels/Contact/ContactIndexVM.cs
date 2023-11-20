@@ -22,6 +22,7 @@ namespace DMS.az.ViewModels.Contact
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string SenderEmail { get; set; }
+        [Required(ErrorMessage = "You should enter message")]
         public string Content { get; set; }
     }
 }

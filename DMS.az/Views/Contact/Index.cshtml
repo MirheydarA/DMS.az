@@ -55,12 +55,15 @@
                     <form id="contact" asp-action="index" asp-controller="contact" method="post">
                         <fieldset>
                             <input asp-for="SenderName" placeholder="Your name" type="text" tabindex="1" autofocus>
+                            <span asp-validation-for="SenderName" style="font-size: 16px; color:red"></span>
                         </fieldset>
                         <fieldset>
                             <input asp-for="SenderEmail" placeholder="Your Email Address" type="email" tabindex="2" required>
+                            <span asp-validation-for="SenderEmail" style="font-size: 16px; color:red"></span>
                         </fieldset>
                         <fieldset>
                             <textarea asp-for="Content" placeholder="Type your message here...." tabindex="5" required></textarea>
+                            <span asp-validation-for="Content" style="font-size: 16px; color:red"></span>
                         </fieldset>
 
                         <fieldset class="bttn_submit">
@@ -78,14 +81,19 @@
 <!-- END MAIN -->
 @section Scripts{
     <script>
-        // Check for success message in TempData and show Toastr notification
         var successMessage = '@TempData["SuccessMessage"]';
         if (successMessage) {
             toastr.success( successMessage, '', { positionClass: 'toast-bottom-right' });
+            
+            document.getElementById("SenderName").value = "";
+            document.getElementById("SenderEmail").value = "";
+            document.getElementById("Content").value = "";
+        }
+        else if (successMessage == 0 ) {
+
         }
 
 
-            document.getElementById('contact').reset();
 
 
     </script>

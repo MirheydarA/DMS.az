@@ -61,7 +61,7 @@ namespace DMS.az.Controllers
 
             model = new ContactIndexVM
             {
-                Contact = await _context.Contact.ToListAsync()
+                Contact = await _context.Contact.ToListAsync(),
             };
 
 

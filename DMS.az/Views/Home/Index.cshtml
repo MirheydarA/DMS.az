@@ -4,6 +4,13 @@
 @section links{
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/Users/assets/css/index/index.css" />
+
+    <!-- Toastr JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="~/Users/assets/StyleSheet.css">
+    <!-- -------- -->
 }
 
 <!-- START MAIN -->
@@ -19,7 +26,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-   </section>
+    </section>
 
     <section id="about_h">
         <div class="container">
@@ -93,7 +100,7 @@
         <div class="container">
             <div class="title"><h2>XİDMƏTLƏR</h2></div>
 
-            <div id="services-container" class="services_info">
+            <div id="services-container" class="services_info" style="grid-row-gap: 1rem;">
                 @foreach (var item in Model.Services)
                 {
                     <div class="info">
@@ -164,16 +171,19 @@
                     </ul>
                 </div>
 
-                <div class="contact_box">
-                    <form id="contact" action="" method="post">
+                <div class="contact_box" >
+                    <form id="contact" asp-action="index" asp-controller="home" method="post">
                         <fieldset>
-                            <input placeholder="Your name" type="text" tabindex="1" required>
+                            <input asp-for="SenderName" placeholder="Your name" type="text" tabindex="1">
+                            <span asp-validation-for="SenderName" style="font-size: 16px; color:red"></span>
                         </fieldset>
                         <fieldset>
-                            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                            <input asp-for="SenderEmail" placeholder="Your Email Address" type="email" tabindex="2">
+                            <span asp-validation-for="SenderEmail" style="font-size: 16px; color:red"></span>
                         </fieldset>
                         <fieldset>
-                            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                            <textarea asp-for="Content" placeholder="Type your message here...." tabindex="5"></textarea>
+                            <span asp-validation-for="Content" style="font-size: 16px; color:red"></span>
                         </fieldset>
 
                         <fieldset class="bttn_submit">
@@ -191,7 +201,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/Users/assets/slick-1.8.1/slick/slick.min.js"></script>
     <script src="~/Users/assets/js/index/index.js"></script>
-
     <script src="/Users/assets/js/HomeLoadMore.js"></script>
+
+        <script>
+
+            var successMessage = '@TempData["SuccessMessage"]';
+            var unsuccessMessage = '@TempData["UnSuccessMessage"]';
+            if (successMessage) {
+                toastr.success(successMessage, '', { positionClass: 'toast-bottom-right' });
+
+                document.getElementById("SenderName").value = "";
+                document.getElementById("SenderEmail").value = "";
+                document.getElementById("Content").value = "";
+            document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
+
+            }
+
+        else if (unsuccessMessage) {
+            document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+
+    </script>
+
+
 
     }
