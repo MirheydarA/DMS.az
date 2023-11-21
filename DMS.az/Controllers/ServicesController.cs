@@ -15,7 +15,9 @@ namespace DMS.az.Controllers
 		}
         public async Task<IActionResult> Index()
 		{
-			var model = new ServicesIndexVM
+            ViewBag.Title = "Xidmətlər";
+
+            var model = new ServicesIndexVM
 			{
 				Services = await _context.Services.Where(s => !s.IsDeleted).OrderByDescending(x => x.Id).ToListAsync(),
 			};

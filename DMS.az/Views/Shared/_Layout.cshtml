@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Əsas səhifə</title>
-    <link rel="icon" href="~/Users/assets/images/index/logo-icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="~/Users/assets/slick-1.8.1/slick/slick-theme.css">
-    <link rel="stylesheet" href="~/Users/assets/slick-1.8.1/slick/slick.css">
+    @*<link rel="shortcut icon" href="~/Users/assets/images/index/logo-icon.png" />*@
+    <link rel="icon"
+          href="~/Users/assets/images/index/Artboard 17 1.png"
+          type="image/x-icon" />
+
     @RenderSection("links", required:false)
 </head>
 <body>
@@ -33,16 +34,13 @@
                             <li><a asp-action="index" asp-controller="aboutus"><span>Haqqımızda</span></a></li>
                             <li><a asp-action="index" asp-controller="portfolio"><span>Portfolio</span></a></li>
                             <li><a asp-action="index" asp-controller="services"><span>Xidmətlər</span></a></li>
-                            <li><a asp-action="" asp-controller=""><span>Karyera V2</span></a></li>
+                            <li><a href="#"><span>Karyera V2</span></a></li>
                             <li><a asp-action="index" asp-controller="contact"><span>Əlaqə</span></a></li>
             </div>
             </ul>
             </nav>
 
         </section>
-        <!-- <section id="nav-title">
-          <div class="nav-title"><h1>Digital Marketing Solution</h1></div>
-        </section> -->
         </div>
     </header>
 
@@ -136,10 +134,9 @@
     </footer>
     <!-- END FOOTER -->
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/Users/assets/slick-1.8.1/slick/slick.min.js"></script>
-    <script src="~/Users/assets/js/index/index.js"></script>
-
     @RenderSection("Scripts", false)
 
 </body>

@@ -10,5 +10,6 @@ namespace DMS.az.Areas.Admin.ViewModels.Message
         }
 
         public List<Models.Message> Messages { get; set; }
+        public bool IsChecked { get; set; }
     }
 }

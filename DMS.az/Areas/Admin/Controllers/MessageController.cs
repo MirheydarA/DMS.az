@@ -15,11 +15,15 @@ namespace DMS.az.Areas.Admin.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(MessageIndexVM model)
         {
-            var model = new MessageIndexVM();
+            if (model.IsChecked == true)
+            {
+                model.Messages = await _context.Messages.Where(m => !m.IsOpened).OrderByDescending(m => m.Id).ToListAsync();
+                return View(model);
+            }
 
-            model.Messages = await _context.Messages.Where(m => !m.IsOpened).OrderByDescending(m => m.Id).ToListAsync();
+            model.Messages = await _context.Messages.OrderByDescending(m => m.Id).ToListAsync();
             return View(model);
         }
 

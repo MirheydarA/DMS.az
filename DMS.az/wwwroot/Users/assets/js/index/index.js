@@ -8,6 +8,8 @@ function myFunction() {
   }
 }
 
+
+
 // LANGUAGE CHANGER
 
 $("#dd span").change(function(e) {
@@ -88,4 +90,52 @@ $('.slider').slick({
 });
 
 
+
+// HEADER SLIDER
+let swiper = new Swiper('.swiper', {
+  loop: true,
+  watchSlidesProgress: true,
+  autoplay: {
+    speed: 3000
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  on: {
+    slideChangeTransitionEnd: function(s) {
+      i = s.progress;
+      params = s.params;
+      //console.log("progress" + i);
+      if(i >= 1) {
+        swiper.destroy(false, false);
+        params.autoplay = false;
+        swiper = new Swiper('.swiper', params);
+      }
+    }
+  }
+});
+
+// FORM BUTTON
+document.getElementById("contact-submit").onclick = function (event) {
+
+  var formFields = document.querySelectorAll('#contact input');
+
+  var isFormValid = Array.from(formFields).every(function (field) {
+    return field.value.trim() !== '';
+  });
+
+  if (isFormValid) {
+    swal("Successfully!");
+
+  } else {
+    swal("Please fill in all fields!");
+  }
+}; 
 

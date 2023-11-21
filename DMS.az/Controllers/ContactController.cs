@@ -25,6 +25,8 @@ namespace DMS.az.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            ViewBag.Title = "Əlaqə";
+
             var model = new ContactIndexVM
             {
                 Contact = await _context.Contact.ToListAsync()
@@ -53,7 +55,7 @@ namespace DMS.az.Controllers
             _context.Messages.Add(message);
             _context.SaveChanges();
 
-            var emailMessage = new Utilities.Message(new[] { "a.mirheyder004@gmail.com" }, "New Contact Form Submission", message.Content, message.SenderEmail);
+            var emailMessage = new Utilities.Message(new[] { "İnfo@dms.az" }, "New Message", message.Content, message.SenderEmail);
             _emailSender.SendEmail(emailMessage);
 
 
@@ -65,7 +67,7 @@ namespace DMS.az.Controllers
             };
 
 
-            return View(model);
+            return RedirectToAction(nameof(Index));
         }
 
     }

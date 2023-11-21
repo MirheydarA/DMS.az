@@ -2,35 +2,37 @@
 @model HomeIndexVM
 
 @section links{
+    <title>@ViewBag.Title - DMS.az</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/Users/assets/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="~/Users/assets/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="~/Users/assets/css/index/index.css" />
 
     <!-- Toastr JS-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+@*    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-    <link rel="stylesheet" href="~/Users/assets/StyleSheet.css">
+    <link rel="stylesheet" href="~/Users/assets/Toastr.css">*@
     <!-- -------- -->
 }
 
 <!-- START MAIN -->
 <main>
+
     <section id="slider_header">
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="~/Users/assets/images/index/header/slider1.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="~/Users/assets/images/index/header/slider2.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="~/Users/assets/images/index/header/slider3.jpg" alt=""></div>
+                @foreach (var item in Model.Sliders)
+                {
+                    <div class="swiper-slide"><img src="~/Users/images/@item.MediaPath" alt="">DIGITAL MARKETING SOLUTIONS1</div>
+                }
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
     </section>
 
     <section id="about_h">
         <div class="container">
-
             @if (Model.AboutUs is not null)
             {
                 <div class="title"><h2>HAQQIMIZDA</h2></div>
@@ -78,7 +80,6 @@
     </section>
 
     <section id="portfolio_h">
-
         @if (Model.Portfolios.Count != 0)
         {
             <div class="container">
@@ -171,7 +172,7 @@
                     </ul>
                 </div>
 
-                <div class="contact_box" >
+                <div class="contact_box">
                     <form id="contact" asp-action="index" asp-controller="home" method="post">
                         <fieldset>
                             <input asp-for="SenderName" placeholder="Your name" type="text" tabindex="1">
@@ -199,32 +200,26 @@
 <!-- END MAIN -->
 @section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/Users/assets/slick-1.8.1/slick/slick.min.js"></script>
     <script src="~/Users/assets/js/index/index.js"></script>
-    <script src="/Users/assets/js/HomeLoadMore.js"></script>
+    <script src="~/Users/assets/HomeLoadMore.js"></script>
 
-        <script>
+    <script>
+        //var successMessage = '@TempData["SuccessMessage"]';
+        //var unsuccessMessage = '@TempData["UnSuccessMessage"]';
+        //if (successMessage) {
+        //    toastr.success(successMessage, '', { positionClass: 'toast-bottom-right' });
 
-            var successMessage = '@TempData["SuccessMessage"]';
-            var unsuccessMessage = '@TempData["UnSuccessMessage"]';
-            if (successMessage) {
-                toastr.success(successMessage, '', { positionClass: 'toast-bottom-right' });
+        //    document.getElementById("SenderName").value = "";
+        //    document.getElementById("SenderEmail").value = "";
+        //    document.getElementById("Content").value = "";
+        //    document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
 
-                document.getElementById("SenderName").value = "";
-                document.getElementById("SenderEmail").value = "";
-                document.getElementById("Content").value = "";
-            document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
+        //}
 
-            }
-
-        else if (unsuccessMessage) {
-            document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
-        }
-
-
-
+        //else if (unsuccessMessage) {
+        //    document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
+        //}
     </script>
-
-
-
-    }
+}

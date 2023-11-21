@@ -2957,8 +2957,12 @@
       "PackagePath": "staticwebassets\\Admin\\vendors\\typeahead.js\\typeahead.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\assets\\StyleSheet.css",
-      "PackagePath": "staticwebassets\\Users\\assets\\StyleSheet.css"
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\assets\\HomeLoadMore.js",
+      "PackagePath": "staticwebassets\\Users\\assets\\HomeLoadMore.js"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\assets\\Toastr.css",
+      "PackagePath": "staticwebassets\\Users\\assets\\Toastr.css"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\assets\\css\\about\\about.css",
@@ -3293,10 +3297,6 @@
       "PackagePath": "staticwebassets\\Users\\assets\\images\\portfolio\\3.png"
     },
     {
-      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\assets\\js\\HomeLoadMore.js",
-      "PackagePath": "staticwebassets\\Users\\assets\\js\\HomeLoadMore.js"
-    },
-    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\assets\\js\\about\\about.js",
       "PackagePath": "staticwebassets\\Users\\assets\\js\\about\\about.js"
     },
@@ -3445,6 +3445,14 @@
       "PackagePath": "staticwebassets\\Users\\images\\0d7667ea-0e98-446f-8a91-14632729dbb2_3.png"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\0f490c74-933d-45d1-aeff-e4e2749c55b2_slider1.png",
+      "PackagePath": "staticwebassets\\Users\\images\\0f490c74-933d-45d1-aeff-e4e2749c55b2_slider1.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\159cfc83-911e-4df2-8377-0e5211515b44_slider3.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\159cfc83-911e-4df2-8377-0e5211515b44_slider3.jpg"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\1fcb2fbb-e1c3-4004-a227-83ad0834f49d_2.png",
       "PackagePath": "staticwebassets\\Users\\images\\1fcb2fbb-e1c3-4004-a227-83ad0834f49d_2.png"
     },
@@ -3485,12 +3493,20 @@
       "PackagePath": "staticwebassets\\Users\\images\\310ca672-bd59-41e1-90a2-0e37c558a59f_2.png"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\316186db-37dc-46d0-a1f2-cd914a5a0aaf_slider1.png",
+      "PackagePath": "staticwebassets\\Users\\images\\316186db-37dc-46d0-a1f2-cd914a5a0aaf_slider1.png"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\440092cc-ee68-4ae1-bbe6-9f504220e5a4_logo.png",
       "PackagePath": "staticwebassets\\Users\\images\\440092cc-ee68-4ae1-bbe6-9f504220e5a4_logo.png"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\44782af4-71a2-4595-b9cf-5d4342dd7fa7_logo2.png",
       "PackagePath": "staticwebassets\\Users\\images\\44782af4-71a2-4595-b9cf-5d4342dd7fa7_logo2.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\452691b8-98df-44b9-a663-dc25b4028c4b_slider1.png",
+      "PackagePath": "staticwebassets\\Users\\images\\452691b8-98df-44b9-a663-dc25b4028c4b_slider1.png"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\4a3deff9-5750-4891-b461-a8fc034dbc52_graphic_d_icon.png",
@@ -3525,6 +3541,10 @@
       "PackagePath": "staticwebassets\\Users\\images\\6a9f9685-987b-4882-b225-76e6987b8cf1_1.png"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\6bee7b7c-4fc8-43a8-bae2-ea1adaf7a30c_slider1.png",
+      "PackagePath": "staticwebassets\\Users\\images\\6bee7b7c-4fc8-43a8-bae2-ea1adaf7a30c_slider1.png"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\6c116077-183d-48f2-b7af-318f8643fe59_istockphoto-1287615602-612x612ş1.jpg",
       "PackagePath": "staticwebassets\\Users\\images\\6c116077-183d-48f2-b7af-318f8643fe59_istockphoto-1287615602-612x612ş1.jpg"
     },
@@ -3533,8 +3553,16 @@
       "PackagePath": "staticwebassets\\Users\\images\\6c75696b-0078-4c5a-af17-e2c606ff74c8_teamwork.png"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\73a047b0-9588-4552-b5b5-116c7eab63a7_slider2.jpg",
+      "PackagePath": "staticwebassets\\Users\\images\\73a047b0-9588-4552-b5b5-116c7eab63a7_slider2.jpg"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\83fa3cd4-4259-4b10-b337-66267f5932af_graphic_d_icon.png",
       "PackagePath": "staticwebassets\\Users\\images\\83fa3cd4-4259-4b10-b337-66267f5932af_graphic_d_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\848d9c17-a1e2-4a4f-8d1c-7827f0fd2978_slider1.png",
+      "PackagePath": "staticwebassets\\Users\\images\\848d9c17-a1e2-4a4f-8d1c-7827f0fd2978_slider1.png"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\85427a6c-ab2e-4620-b1c6-91c126b73f20_logo.png",
@@ -3557,8 +3585,16 @@
       "PackagePath": "staticwebassets\\Users\\images\\92fe8f85-dd77-4f43-ac5b-8c07c4a5fb9b_graphic_d_icon.png"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\92ff8326-88c9-488e-a673-441bb5cd89c4_slider1.png",
+      "PackagePath": "staticwebassets\\Users\\images\\92ff8326-88c9-488e-a673-441bb5cd89c4_slider1.png"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\982e6e20-c245-4af8-9abb-139b6da3f7df_logo.png",
       "PackagePath": "staticwebassets\\Users\\images\\982e6e20-c245-4af8-9abb-139b6da3f7df_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\9ab74f27-a6d0-4240-8128-d3d5ce560e8f_slider1.png",
+      "PackagePath": "staticwebassets\\Users\\images\\9ab74f27-a6d0-4240-8128-d3d5ce560e8f_slider1.png"
     },
     {
       "Id": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\9d393605-c688-4db8-b78d-dc8bb24cd4ab_graphic_d_icon.png",

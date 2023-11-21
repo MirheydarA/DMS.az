@@ -15,6 +15,9 @@ namespace DMS.az.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            ViewBag.Title = "Haqqımızda";
+
+
             var model = new AboutUsIndexVM
             {
                 AboutUs = await _context.AboutUs.ToListAsync(),

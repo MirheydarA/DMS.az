@@ -19,6 +19,7 @@ namespace DMS.az.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            ViewBag.Title = "Əsas Səhifə";
             ViewBag.ServicesCount = _context.Services.Count();
 
             var model = new HomeIndexVM
@@ -41,6 +42,8 @@ namespace DMS.az.Controllers
             if (!ModelState.IsValid)
             {
                 TempData["UnSuccessMessage"] = "unsuccess";
+                ViewBag.Title = "Əsas Səhifə";
+
 
                 var model1 = new HomeIndexVM
                 {
@@ -66,7 +69,7 @@ namespace DMS.az.Controllers
             _context.Messages.Add(message);
             _context.SaveChanges();
 
-            var emailMessage = new Utilities.Message(new[] { "a.mirheyder004@gmail.com" }, "New Contact Form Submission", message.Content, message.SenderEmail);
+            var emailMessage = new Utilities.Message(new[] { "a.mirheyder004@gmail.com" }, "New Message", message.Content, message.SenderEmail);
             _emailSender.SendEmail(emailMessage);
 
 

@@ -2,6 +2,7 @@
 @model ContactIndexVM
 
 @section links{
+    <title>@ViewBag.Title - DMS.az</title>
     <link rel="stylesheet" href="~/Users/assets/css/contact-us/contact-us.css" />
 
     <!-- Toastr JS-->
@@ -82,20 +83,20 @@
 @section Scripts{
     <script>
         var successMessage = '@TempData["SuccessMessage"]';
+        var unsuccessMessage = '@TempData["UnSuccessMessage"]';
         if (successMessage) {
-            toastr.success( successMessage, '', { positionClass: 'toast-bottom-right' });
-            
+            toastr.success(successMessage, '', { positionClass: 'toast-bottom-right' });
+
             document.getElementById("SenderName").value = "";
             document.getElementById("SenderEmail").value = "";
             document.getElementById("Content").value = "";
-        }
-        else if (successMessage == 0 ) {
+            document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
 
         }
 
-
-
-
+        else if (unsuccessMessage) {
+            document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 
 }

@@ -16,6 +16,8 @@ namespace DMS.az.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            ViewBag.Title = "Portfolio";
+
             var model = new PortfolioIndexVM
             {
                 Portfolio = await _context.Portfolios.Where(p => !p.IsDeleted).Include(p => p.PortfolioCategory).ToListAsync(),

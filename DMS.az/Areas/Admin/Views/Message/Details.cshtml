@@ -11,27 +11,19 @@
     <div class="px-4">
         @if (Model is not null)
         {
-            <p>Göndərənin adı: @Model.SenderName</p>
-            <p>Göndərənin Email i: @Model.SenderEmail</p>
-            <p>Mesaj: @Model.Content</p>
+            <h4 style="display:inline">Göndərənin adı:</h4> <span>@Model.SenderName</span> <br /> <br />
+            <h4 style="display:inline; ">Göndərənin Email'i:</h4> <span>@Model.SenderName</span>
+            <br /><br />
+            <h4 style="display:inline">Mesaj:</h4> <span>@Model.Content</span>
+            <br /><br />
 
             if (Model.CreatedAt.ToString() is not null)
             {
-                <h3>Yaranma tarixi</h3>
+                <h3>Göndərilmə tarixi</h3>
                 <span>@Model.CreatedAt</span>
             }
         }
     </div>
-
-
-
-
-
-
-
-
-
-
 </div>
 
 

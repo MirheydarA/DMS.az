@@ -46,22 +46,6 @@ body #navbar_background {
   /* Tablet to Desktop */
 }
 
-body #slider_header {
-  top: 0;
-  position: absolute;
-  width: 100%;
-}
-
-body #slider_header .swiper .swiper-wrapper .swiper-slide {
-  height: 70vh;
-  background-color: lightgray;
-}
-
-body #slider_header .swiper .swiper-wrapper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-}
-
 body #navbar_background #navbar-area {
   margin: 0 auto;
   padding-top: 2.4rem;
@@ -251,8 +235,24 @@ body #navbar_background #nav-title .nav-title h1 {
   }
 }
 
+body #slider_header {
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
+body #slider_header .swiper .swiper-wrapper .swiper-slide {
+  height: 100vh;
+  background-color: lightgray;
+}
+
+body #slider_header .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
 body #about_h {
-  margin-top: 60rem;
+  margin-top: 75rem;
 }
 
 body #about_h .container {
@@ -273,7 +273,7 @@ body #about_h .title::after {
 }
 
 body #about_h .title h2 {
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   padding-bottom: 0.8rem;
   font-family: Montserrat-Bold;
@@ -554,7 +554,7 @@ body #about_h .content .about_us:nth-child(2)::after {
   }
 
   body #about_h .content .about_us p {
-    width: 59.4rem;
+    width: 100%;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
@@ -582,6 +582,15 @@ body #about_h .content .about_us:nth-child(2)::after {
 
   body #about_h .images .images-office {
     display: none;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 933px) {
+  body #about_h .title h2 {
+    font-family: Montserrat-Bold;
+    font-size: 36px;
+    color: white;
+    padding-bottom: 0.8rem;
   }
 }
 
@@ -662,7 +671,7 @@ body #portfolio_h .container .title::after {
 
 body #portfolio_h .container .title h2 {
   font-family: Montserrat-Bold;
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   padding-bottom: 0.8rem;
 }
@@ -733,6 +742,14 @@ body #portfolio_h .container .slider .slick-dots li button:before {
   }
 }
 
+@media (min-width: 500px) and (max-width: 933px) {
+  body #portfolio_h .container .title h2 {
+    font-family: Montserrat-Bold;
+    font-size: 36px;
+    color: white;
+  }
+}
+
 @media (min-width: 360px) and (max-width: 500px) {
   body #portfolio_h .container .title h2 {
     font-family: Montserrat-Bold;
@@ -761,7 +778,7 @@ body #services_h .title::after {
 
 body #services_h .title h2 {
   font-family: Montserrat-Bold;
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   padding-bottom: 0.8rem;
 }
@@ -908,6 +925,13 @@ body #services_h .more .more_bttn:hover {
     grid-template-columns: auto;
     padding: 3.6rem 2.6rem 9.9rem;
   }
+
+  body #services_h .title h2 {
+    font-family: Montserrat-Bold;
+    font-size: 36px;
+    color: white;
+    padding-bottom: 0.8rem;
+  }
 }
 
 @media (min-width: 360px) and (max-width: 500px) {
@@ -973,7 +997,7 @@ body #colleagues_h .title::after {
 
 body #colleagues_h .title h2 {
   font-family: Montserrat-Bold;
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   padding-bottom: 0.8rem;
 }
@@ -1016,7 +1040,7 @@ body #colleagues_h .slider .slick-dots li button:before {
 
 @media (min-width: 500px) and (max-width: 930px) {
   body #colleagues_h .title h2 {
-    font-size: 24px;
+    font-size: 36px;
   }
 }
 
@@ -1045,7 +1069,7 @@ body #contact_h .title::after {
 
 body #contact_h .title h2 {
   font-family: Montserrat-Bold;
-  font-size: 52px;
+  font-size: 45px;
   color: white;
   padding-bottom: 0.8rem;
 }
@@ -1258,11 +1282,19 @@ body #contact_h .contact_info .contact_box #contact textarea:focus {
   }
 }
 
-@media (min-width: 360px) and (max-width: 929px) {
+@media (min-width: 500px) and (max-width: 933px) {
+  body #contact_h .title h2 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 500px) {
   body #contact_h .title h2 {
     font-size: 24px;
   }
+}
 
+@media (min-width: 360px) and (max-width: 929px) {
   body #contact_h .contact_info .info .icon img {
     width: 4.5rem;
   }
@@ -1452,6 +1484,12 @@ body #footer .footer-col ul li a {
 body #footer .footer-col ul li a:hover {
   color: #ffffff;
   padding-left: 0.8rem;
+}
+
+@media(max-width: 1496px) {
+  body #footer_part2 {
+    padding-top: 5rem !important;
+  }
 }
 
 @media (max-width: 76.7rem) {

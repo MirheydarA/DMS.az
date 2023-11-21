@@ -43,7 +43,7 @@ namespace DSM.az.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SliderCreateVM model)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) { return View(model); }
 
             if (model.Type.ToString() == "Photo")
             {
