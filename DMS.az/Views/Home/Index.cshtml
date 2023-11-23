@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/Users/assets/css/index/index.css" />
 
     <!-- Toastr JS-->
-@*    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            @*    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="~/Users/assets/Toastr.css">*@
@@ -204,22 +204,22 @@
     <script src="~/Users/assets/slick-1.8.1/slick/slick.min.js"></script>
     <script src="~/Users/assets/js/index/index.js"></script>
     <script src="~/Users/assets/HomeLoadMore.js"></script>
-
     <script>
-        //var successMessage = '@TempData["SuccessMessage"]';
-        //var unsuccessMessage = '@TempData["UnSuccessMessage"]';
-        //if (successMessage) {
-        //    toastr.success(successMessage, '', { positionClass: 'toast-bottom-right' });
+        var successMessage = '@TempData["SuccessMessage"]';
+        var unsuccessMessage = '@TempData["UnSuccessMessage"]';
+        if (successMessage) {
+            document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
 
-        //    document.getElementById("SenderName").value = "";
-        //    document.getElementById("SenderEmail").value = "";
-        //    document.getElementById("Content").value = "";
-        //    document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
-
-        //}
-
-        //else if (unsuccessMessage) {
-        //    document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
-        //}
+            document.getElementById("SenderName").value = "";
+            document.getElementById("SenderEmail").value = "";
+            document.getElementById("Content").value = "";
+            //console.log("okey")
+            swal("Successfully!");
+        }
+        else if (unsuccessMessage) {
+            swal("Please fill in all fields!11111111111111111111");
+            document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
+
 }

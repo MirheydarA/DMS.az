@@ -112,7 +112,7 @@ let swiper = new Swiper('.swiper', {
     slideChangeTransitionEnd: function(s) {
       i = s.progress;
       params = s.params;
-      //console.log("progress" + i);
+      console.log("progress" + i);
       if(i >= 1) {
         swiper.destroy(false, false);
         params.autoplay = false;
@@ -122,20 +122,4 @@ let swiper = new Swiper('.swiper', {
   }
 });
 
-// FORM BUTTON
-document.getElementById("contact-submit").onclick = function (event) {
-
-  var formFields = document.querySelectorAll('#contact input');
-
-  var isFormValid = Array.from(formFields).every(function (field) {
-    return field.value.trim() !== '';
-  });
-
-  if (isFormValid) {
-    swal("Successfully!");
-
-  } else {
-    swal("Please fill in all fields!");
-  }
-}; 
 

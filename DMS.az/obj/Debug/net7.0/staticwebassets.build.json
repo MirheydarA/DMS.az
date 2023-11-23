@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Bgv8ywp5fCccNgsfJRCgAgVvqcZOtlmcCZsmgwAwbr4=",
+  "Hash": "7vqnYY3ZzihxFGVhEEbBj/Hw5pbcHOp2f6EJb2bRL2Y=",
   "Source": "DMS.az",
   "BasePath": "_content/DMS.az",
   "Mode": "Default",
@@ -14992,6 +14992,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Users\\images\\51b7ba9d-d3be-44f3-92b3-284f21f013d3_2.png"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\5b718db8-d666-4bce-a316-f030264ab622_slider1.png",
+      "SourceId": "DMS.az",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\",
+      "BasePath": "_content/DMS.az",
+      "RelativePath": "Users/images/5b718db8-d666-4bce-a316-f030264ab622_slider1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\images\\5b718db8-d666-4bce-a316-f030264ab622_slider1.png"
     },
     {
       "Identity": "C:\\Users\\ASUS\\Desktop\\projects\\DMS.az\\DMS.az\\wwwroot\\Users\\images\\5fc4c83f-3865-4136-8008-f4aba31b57e6_22.jpg",
