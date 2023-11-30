@@ -24,8 +24,23 @@
             <div class="swiper-wrapper">
                 @foreach (var item in Model.Sliders)
                 {
-                    <div class="swiper-slide"><img src="~/Users/images/@item.MediaPath" alt="">DIGITAL MARKETING SOLUTIONS1</div>
+                    @if (item.Type.ToString() == "Photo")
+                    {
+                        <div class="swiper-slide">
+                            <img src="~/Users/images/@item.MediaPath" alt="">
+                            <p>@item.Title</p>
+                        </div>
+                    }
+
+                    @if (item.Type.ToString() == "Video")
+                    {
+                        <div class="swiper-slide">
+                            <video autoplay muted loop id="slider"><source src="~/Users/assets/images/index/header/Galaxy Motion Background Video [HD] ~ FREE.mp4" type="video/mp4"></video>            
+                            <p>Digital Marketing Solution1</p>
+                        </div>
+                    }
                 }
+
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -102,19 +117,23 @@
             <div class="title"><h2>XİDMƏTLƏR</h2></div>
 
             <div id="services-container" class="services_info" style="grid-row-gap: 1rem;">
+                @{
+                    var i = 0;
+                }
                 @foreach (var item in Model.Services)
                 {
-                    <div class="info">
-                        <img src="~/Users/images/@item.Icon" alt="">
-                        <h3>@item.Name</h3>
-                        <p>
-                            @item.ShortDesc
-                        </p>
-                    </div>
+                    <a href="./offers.html" onclick="setSelectedService(@i)">
+                        <div class="info">
+                            <img src="~/Users/images/@item.Icon" alt="">
+                            <h3>@item.Name</h3>
+                            <p>
+                                @item.ShortDesc
+                            </p>
+                        </div>
+                    </a>
+                    i++;
                 }
             </div>
-
-
             <div class="more"><a id="loadMore" data-count="@ViewBag.ServicesCount" style="display: flex; align-items: center; justify-content:center" class="more_bttn">Daha çox</a></div>
 
         </div>
@@ -196,6 +215,7 @@
 
         </div>
     </section>
+
 </main>
 <!-- END MAIN -->
 @section Scripts{
@@ -217,7 +237,7 @@
             swal("Successfully!");
         }
         else if (unsuccessMessage) {
-            swal("Please fill in all fields!11111111111111111111");
+            swal("Please fill in all fields!");
             document.getElementById('contact_h').scrollIntoView({ behavior: 'smooth' });
         }
     </script>

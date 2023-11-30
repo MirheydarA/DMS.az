@@ -28,10 +28,8 @@ C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.DiaSymRe
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.DotNet.Scaffolding.Shared.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
@@ -50,7 +48,6 @@ C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.VisualSt
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\NuGet.Common.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\NuGet.Configuration.dll
@@ -61,7 +58,6 @@ C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\NuGet.Packaging.dl
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\NuGet.ProjectModel.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\NuGet.Protocol.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\NuGet.Versioning.dll
-C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\System.Composition.AttributedModel.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\System.Composition.Convention.dll
 C:\Users\ASUS\Desktop\projects\DMS.az\DMS.az\bin\Debug\net7.0\System.Composition.Hosting.dll

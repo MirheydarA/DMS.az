@@ -12,37 +12,34 @@ function myFunction() {
 
 // LANGUAGE CHANGER
 
-$("#dd span").change(function(e) {
-  console.log("dropdown change event is fire : "+$(this).text());
+$("#dd span").change(function (e) {
+  console.log("dropdown change event is fire : " + $(this).text());
 });
-$("#de span").change(function(e) {
-  console.log("dropdown change event is fire : "+$(this).text());
+$("#de span").change(function (e) {
+  console.log("dropdown change event is fire : " + $(this).text());
 });
-(function ( $ ) {
-    $.fn.dropdown = function()
-                  {
-        var el = $(this);
-        el.addClass("dropdown");
-                var holder = $("span.holder",el);
-               var opts_con = $("ul",el);                                 
-        var opts   = $("ul li",el);
-        var val    = "";
-opts_con.prepend("<span class='arrow_up'></span>");
-      
-          el.on("click",function()
-          {
-            opts_con.toggleClass("active")
-                    
-          });
-          
-            opts.on("click",function()
-            {
-          holder.text($(this).text());
-          holder.change();
-            }); 
-     }
-          
-}( jQuery ));	
+(function ($) {
+  $.fn.dropdown = function () {
+    var el = $(this);
+    el.addClass("dropdown");
+    var holder = $("span.holder", el);
+    var opts_con = $("ul", el);
+    var opts = $("ul li", el);
+    var val = "";
+    opts_con.prepend("<span class='arrow_up'></span>");
+
+    el.on("click", function () {
+      opts_con.toggleClass("active")
+
+    });
+
+    opts.on("click", function () {
+      holder.text($(this).text());
+      holder.change();
+    });
+  }
+
+}(jQuery));
 $("#dd").dropdown();
 
 
@@ -109,11 +106,11 @@ let swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
   on: {
-    slideChangeTransitionEnd: function(s) {
+    slideChangeTransitionEnd: function (s) {
       i = s.progress;
       params = s.params;
       console.log("progress" + i);
-      if(i >= 1) {
+      if (i >= 1) {
         swiper.destroy(false, false);
         params.autoplay = false;
         swiper = new Swiper('.swiper', params);
@@ -122,4 +119,24 @@ let swiper = new Swiper('.swiper', {
   }
 });
 
+// FORM BUTTON
+document.getElementById("contact-submit").onclick = function (event) {
+  event.preventDefault();
 
+  var formFields = document.querySelectorAll('#contact input');
+
+  var isFormValid = Array.from(formFields).every(function (field) {
+    return field.value.trim() !== '';
+  });
+
+  if (isFormValid) {
+    swal("Successfully!");
+
+  } else {
+    swal("Please fill in all fields!");
+  }
+};
+
+function setSelectedService(serviceId) {
+  document.cookie = `selectedService=${serviceId}; path=/`;
+}

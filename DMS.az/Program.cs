@@ -10,10 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-builder.WebHost.UseKestrel(options =>
-{
-    options.Limits.MaxRequestBodySize = 100 * 1024 * 1024;
-});
+//builder.WebHost.UseKestrel(options =>
+//{
+//    options.Limits.MaxRequestBodySize = 100 * 1024 * 1024;
+//});
 
 
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
